@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from '../../logo.svg'
-const navbar = () => {
+import logo from "../../logo.svg";
+
+const Menu = () => {
+  return(
+    <>
+      <p>
+        <a href="#home">Home</a>
+      </p>
+      <p>
+        <a href="#what-is-gpt">What is Gpt</a>
+      </p>
+      <p>
+        <a href="#open-ai">Open AI</a>
+      </p>
+      <p>
+        <a href="#case-study">Case Study</a>
+      </p>
+      <p>
+        <a href="#library">Library</a>
+      </p>
+    </>
+  );
+};
+const Navbar = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className="gpt3__navbar">
       <div className="gpt3__navbar-links">
@@ -10,21 +33,7 @@ const navbar = () => {
           <img src={logo} alt="" />
         </div>
         <div className="gpt3__navbar_links-container">
-          <p>
-            <a href="#home">Home</a>
-          </p>
-          <p>
-            <a href="#what-is-gpt">What is Gpt</a>
-          </p>
-          <p>
-            <a href="#open-ai">Open AI</a>
-          </p>
-          <p>
-            <a href="#case-study">Case Study</a>
-          </p>
-          <p>
-            <a href="#library">Library</a>
-          </p>
+          <Menu />
         </div>
       </div>
       <div className="gpt3__navbar_container-sign">
@@ -32,34 +41,35 @@ const navbar = () => {
         <button type="button">Sign Up</button>
       </div>
       <div className="gpt3__navbar-menu">
-        <div className="gpt3__navbar-menu_container scale-up-center">
-          <div className="gpt3__navbar-menu_container">
+        {toggleMenu ? (
+          <RiCloseLine 
+            color="white"
+            size="2rem"
+            className="gpt3__navbar-menu_menu-icon"
+            onClick={() => setToggleMenu(false)}
+          />
+        ) : (
+          <RiMenu3Line
+            color="white"
+            size="2rem"
+            className="gpt3__navbar-menu_menu-icon"
+            onClick={() => setToggleMenu(true)}
+          />
+        )}
+        {toggleMenu && (
+          <div className="gpt3__navbar-menu_container scale-up-center">
             <div className="gpt3__navbar-menu_container-links">
-              <p>
-                <a href="#home">Home</a>
-              </p>
-              <p>
-                <a href="#what-is-gpt">What is Gpt</a>
-              </p>
-              <p>
-                <a href="#open-ai">Open AI</a>
-              </p>
-              <p>
-                <a href="#case-study">Case Study</a>
-              </p>
-              <p>
-                <a href="#library">Library</a>
-              </p>
+              <Menu />
             </div>
             <div className="gpt3__navbar-menu-sign">
               <p>Sign in</p>
               <button type="button">Sign up</button>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;
