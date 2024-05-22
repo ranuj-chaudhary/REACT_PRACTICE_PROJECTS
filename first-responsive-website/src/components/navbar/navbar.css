@@ -1,0 +1,70 @@
+
+.gpt3__navbar {
+display: flex;
+justify-content: space-between;
+padding: 2rem 6rem;
+}
+
+.gpt3__navbar-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.gpt3__navbar-links_logo {
+    margin-right: 2rem;
+}
+.gpt3__navbar-links_logo img{
+    width: 62.56px;
+    height: 16.02px;
+}
+
+.gpt3__navbar_links-container {
+    display: flex;
+  flex-direction: row; 
+}
+
+.gpt3__navbar_container-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    }
+
+.gpt3__navbar p, 
+.gpt3__navbar_container-sign p,
+.gpt3__navbar-menu_container-links p {
+color: #FFFFFF;
+font-family: var(--font-family);
+font-size: 18px;
+font-weight: 500;
+line-height: 25px;
+text-align: left;
+
+margin: 0 1rem;
+cursor: pointer;
+}
+
+.gpt3__navbar_container-sign button,  .gpt3__navbar-menu-sign button {
+font-family: var(--font-family);
+ background: #FF4820;
+ border-radius: 5px;
+ text-align: center;
+ padding: 0.5rem 1rem;
+
+ font-family: Manrope;
+ font-size: 18px;
+ font-weight: 500;
+ line-height: 25px;
+color:#FFFFFF;
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+
+/* Navbar Menu */
+.gpt3__navbar-menu {
+display: none;
+}
