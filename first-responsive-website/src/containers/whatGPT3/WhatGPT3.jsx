@@ -3,7 +3,7 @@ import './whatgpt3.css'
 const WhatGPT3 = () => {
   return (
     <div>
-      whatgpt3
+      whatgpt3 updated
     </div>
   )
 }
