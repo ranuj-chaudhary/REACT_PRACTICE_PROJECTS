@@ -1,0 +1,186 @@
+.gpt3__whatgpt3 {
+  padding: 0 4rem;
+}
+.gpt3__whatgpt3-container {
+  margin: auto;
+  padding: 4rem 4rem;
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 100% 100%,
+    rgba(27, 120, 222, 1) 0%,
+    rgba(4, 44, 84, 1) 20%
+  );
+}
+
+.gpt3__whatgpt3-about {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  margin: 0 0 4rem;
+  flex-wrap: wrap;
+}
+
+.gpt3__whatgpt3-question h3,
+.gpt3__whatgpt3__sub-heading h3 {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-align: left;
+  width: 100%;
+
+  position: relative;
+}
+.gpt3__whatgpt3-question h3::before,
+.gpt3__whatgpt3__sub-heading h3::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+
+  position: absolute;
+  top: -20px;
+
+  background: radial-gradient(
+    circle at 16% 4%,
+    rgba(174, 103, 250, 1) 0%,
+    rgba(244, 152, 103, 1) 79%
+  );
+}
+
+.gpt3__whatgpt3 p {
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: #81afdd;
+}
+
+.gpt3__whatgpt3-question {
+  display: flex;
+  align-items: flex-start;
+  flex: 0.6;
+}
+
+.gpt3__whatgpt3-answer {
+  flex: 2;
+}
+
+.gpt3__whatgpt3__uses {
+  width: 100%;
+}
+
+.gpt3__whatgpt3__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gpt3__whatgpt3__heading h2 {
+  /* ff 3.6+ */
+  background: radial-gradient(
+    circle at 16% 4%,
+    rgba(174, 103, 250, 1) 0%,
+    rgba(244, 152, 103, 1) 79%
+  );
+  background-clip: text;
+  color: transparent;
+
+  font-family: var(--font-family);
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 45px;
+  text-align: left;
+  width: 472px;
+}
+
+.gpt3__whatgpt3__heading span {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+
+  color: #ff8a71;
+}
+
+.gpt3__whatgpt3__sub-heading {
+  display: flex;
+  margin-top: 8rem;
+  flex-direction: row;
+}
+
+.gpt3__whatgpt3__sub-heading div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+@media screen and (max-width: 1050px) {
+  .gpt3__whatgpt3-about {
+    margin-top: 2rem;
+  }
+  .gpt3__whatgpt3-container {
+    padding: 1rem 2rem;
+  }
+  .gpt3__whatgpt3-question h3,
+  .gpt3__whatgpt3__sub-heading h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .gpt3__whatgpt3-question h3::before,
+  .gpt3__whatgpt3__sub-heading h3::before {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .gpt3__whatgpt3__sub-heading p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .gpt3__whatgpt3-about {
+    flex-direction: column;
+  }
+
+  .gpt3__whatgpt3__heading {
+    display: block;
+  }
+
+  .gpt3__whatgpt3__heading h2,
+  .gpt3__whatgpt3__heading span {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .gpt3__whatgpt3__sub-heading {
+    margin-top: 4rem;
+  }
+
+  .gpt3__whatgpt3__sub-heading div {
+    flex-direction: column;
+  }
+
+  .gpt3__whatgpt3__sub-heading div {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gpt3__whatgpt3__sub-heading {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .gpt3__whatgpt3 {
+    padding: 1rem !important;
+  }
+  .gpt3__whatgpt3__sub-heading p {
+    width: 80%;
+    margin: auto;
+   }
+}

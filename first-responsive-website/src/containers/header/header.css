@@ -139,7 +139,7 @@
   .gpt3__header {
     padding: 4rem 2rem !important;
   }
-  .gpt3__header-content h1 {
+  .gradient__text {
     font-size: 48px;
     line-height: 60px;
   }
@@ -167,7 +167,7 @@
 }
 
 @media screen and (max-width: 550px) {
-  .gpt3__header-content h1 {
+.gradient__text {
     font-size: 32px;
     line-height: 52px;
   }
