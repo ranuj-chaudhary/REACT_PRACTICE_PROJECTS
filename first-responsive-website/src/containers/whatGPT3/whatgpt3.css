@@ -76,6 +76,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 8rem;
+  flex-wrap: ;
 }
 
 .gpt3__whatgpt3__heading h2 {
@@ -106,49 +108,44 @@
   color: #ff8a71;
 }
 
-.gpt3__whatgpt3__sub-heading {
+.gpt3__whatgpt3__application {
   display: flex;
-  margin-top: 8rem;
   flex-direction: row;
 }
 
-.gpt3__whatgpt3__sub-heading div {
-  display: flex;
+.gpt3__whatgpt3__application .gpt3__whatgpt3-feature {
+  display: unset;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
   flex: 1;
+  margin: 1rem;
+  min-width: 210px;
 }
 
 @media screen and (max-width: 1050px) {
   .gpt3__whatgpt3-about {
     margin-top: 2rem;
+    flex-direction: column;
   }
   .gpt3__whatgpt3-container {
     padding: 1rem 2rem;
   }
-  .gpt3__whatgpt3-question h3,
+
   .gpt3__whatgpt3__sub-heading h3 {
-    text-align: center;
     font-size: 20px;
   }
-  .gpt3__whatgpt3-question h3::before,
-  .gpt3__whatgpt3__sub-heading h3::before {
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
+  .gpt3__whatgpt3__application {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
   .gpt3__whatgpt3__sub-heading p {
     text-align: center;
     font-size: 14px;
   }
-  .gpt3__whatgpt3-about {
-    flex-direction: column;
-  }
 
   .gpt3__whatgpt3__heading {
-    display: block;
+   flex-direction: column;
   }
 
   .gpt3__whatgpt3__heading h2,
@@ -157,30 +154,15 @@
     display: block;
     text-align: center;
   }
-
-  .gpt3__whatgpt3__sub-heading {
-    margin-top: 4rem;
-  }
-
-  .gpt3__whatgpt3__sub-heading div {
-    flex-direction: column;
-  }
-
-  .gpt3__whatgpt3__sub-heading div {
-    gap: 1rem;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .gpt3__whatgpt3__sub-heading {
-    flex-direction: column;
-    gap: 2rem;
-  }
   .gpt3__whatgpt3 {
     padding: 1rem !important;
   }
+
   .gpt3__whatgpt3__sub-heading p {
     width: 80%;
     margin: auto;
-   }
+  }
 }
