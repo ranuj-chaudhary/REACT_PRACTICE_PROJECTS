@@ -6,6 +6,7 @@
 
 body {
     background-color: var(--color-bg);
+    position: relative;
 }
 
 a {
