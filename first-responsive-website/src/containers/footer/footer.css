@@ -66,6 +66,9 @@
   .gpt3__footer__Container {
     flex-wrap: wrap;
   }
+  .gpt3__footer {
+    padding: 4rem 2rem !important;
+  }
   .gpt3__footer__links {
     margin-top: 4rem;
     width: 100%;

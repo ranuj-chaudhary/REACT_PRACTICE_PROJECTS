@@ -83,13 +83,36 @@
 
 @media screen and (max-width: 550px) {
   .gpt3__blog {
-    padding: 2rem 2rem !important;
+    padding: 4rem 2rem !important;
   }
   .gpt3__blog__posts {
     display: flex;
     flex-direction: column;
-   }
-   .gpt3__blog__posts .gpt3__article{
+  }
+  .gpt3__blog__posts .gpt3__article {
     margin-bottom: 2rem;
-   }
+  }
 }
+
+/* 
+
+<>
+      <p>
+        <a href="#home">Home</a>
+      </p>
+      <p>
+        <a href="#what-is-gpt">What is Gpt</a>
+      </p>
+      <p>
+        <a href="#open-ai">Open AI</a>
+      </p>
+      <p>
+        <a href="#case-study">Case Study</a>
+      </p>
+      <p>
+        <a href="#library">Library</a>
+      </p>
+    </>
+
+
+*/

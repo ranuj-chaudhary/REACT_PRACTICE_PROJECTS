@@ -4,7 +4,7 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../logo.svg";
 
 const Menu = () => {
-  return(
+  return (
     <>
       <p>
         <a href="#home">Home</a>
@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
       <div className="gpt3__navbar-menu">
         {toggleMenu ? (
-          <RiCloseLine 
+          <RiCloseLine
             color="white"
             size="2rem"
             className="gpt3__navbar-menu_menu-icon"
