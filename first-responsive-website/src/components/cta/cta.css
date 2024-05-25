@@ -39,9 +39,17 @@
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 1050px) {
-    .gpt3__Cta__heading h3 {
-        margin-bottom: 2rem;
-    }
+  .gpt3__Cta__heading h3 {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .gpt3__Cta {
+    padding: 4rem 2rem !important;
+  }
+  .gpt3__Cta__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

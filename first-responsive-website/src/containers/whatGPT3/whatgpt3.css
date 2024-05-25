@@ -157,7 +157,7 @@
 
 @media screen and (max-width: 768px) {
   .gpt3__whatgpt3 {
-    padding: 1rem !important;
+    padding: 4rem 2rem !important;
   }
 
   .gpt3__whatgpt3__sub-heading p {

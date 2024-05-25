@@ -1,13 +1,13 @@
 .gpt3__navbar {
   /* nav bar at top property */
-  /* position: fixed;
+  position: fixed;
   z-index: 99999;
-  width: 100%; */
+  width: 100%;
 
   background-color: var(--color-footer);
   display: flex;
   justify-content: space-between;
- 
+
   padding: 2rem 6rem;
 }
 

@@ -47,10 +47,6 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .gpt3__possibility__image img {
-    width: 80%;
-    height: 100%;
-  }
   .gpt3__possibility__content p {
     font-size: 14px;
     line-height: 24px;
@@ -59,5 +55,10 @@
   .gpt3__possibility {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+@media screen and (max-width: 550px) {
+  .gpt3__possibility {
+    padding: 4rem 2rem !important;
   }
 }
