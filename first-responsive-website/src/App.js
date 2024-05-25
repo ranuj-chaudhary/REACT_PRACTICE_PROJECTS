@@ -1,7 +1,7 @@
 // short cut for react functional components
 // rafce
 import React from "react";
-import { Brand, CTA, Navbar } from "./components";
+import { Brand, Cta, Navbar } from "./components";
 import {
   Blog,
   Features,
@@ -14,7 +14,7 @@ import './App.css'
 const App = () => {
   return (
     <div className="App">
-      <div className="gradient__bg">
+      <div className="gradient__bg" id="#home">
       <Navbar />
       <Header />
       </div>
@@ -22,7 +22,7 @@ const App = () => {
       <WhatGPT3 />
       <Features />
       <Possibility />
-      <CTA />
+      <Cta />
       <Blog />
       <Footer />
     </div>
