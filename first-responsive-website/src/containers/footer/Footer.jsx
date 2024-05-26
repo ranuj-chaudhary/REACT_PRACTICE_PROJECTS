@@ -71,7 +71,7 @@ const linkData = [
 
 const Footer = () => {
   return (
-    <div className="gpt3__footer section__padding">
+    <footer className="gpt3__footer section__padding">
       <div className="gpt3__footer__heading">
         <h1 className="gradient__text">
           Do you want to step in to the future before others
@@ -97,7 +97,7 @@ const Footer = () => {
       <div className="gpt3__footer__copyright">
         <p>© 2021 GPT-3. All rights reserved.</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

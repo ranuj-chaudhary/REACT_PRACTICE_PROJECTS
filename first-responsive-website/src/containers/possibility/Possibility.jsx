@@ -3,7 +3,7 @@ import "./possibility.css";
 import possibilityImage from "../../assets/possibility.png";
 const Possibility = () => {
   return (
-    <div className="gpt3__possibility section__padding" id="library">
+    <section className="gpt3__possibility section__padding" id="library">
       <div className="gpt3__possibility__image">
         <img src={possibilityImage} alt="girl waring vr box to see future" />
       </div>
@@ -20,7 +20,7 @@ const Possibility = () => {
         </p>
         <p> Request Early Access to Get Started</p>
       </div>
-    </div>
+    </section>
   );
 };
 
