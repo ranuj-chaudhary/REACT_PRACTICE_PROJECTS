@@ -33,7 +33,7 @@ const blogData = [
 const Blog = () => {
 
   return (
-    <div className="gpt3__blog section__padding" id="open-ai">
+    <section className="gpt3__blog section__padding" id="open-ai">
       <div className="gpt3__blog__container">
         <div className="gpt3__blog__heading">
           <h1 className="gradient__text">
@@ -52,7 +52,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

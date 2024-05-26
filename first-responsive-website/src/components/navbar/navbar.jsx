@@ -27,7 +27,7 @@ const Menu = () => {
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className="gpt3__navbar" id="#home">
+    <nav className="gpt3__navbar" id="#home">
       <div className="gpt3__navbar-links">
         <div className="gpt3__navbar-links_logo">
           <img src={logo} alt="" />
@@ -68,7 +68,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
