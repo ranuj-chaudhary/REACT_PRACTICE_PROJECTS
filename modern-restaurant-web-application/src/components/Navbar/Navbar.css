@@ -1,0 +1,141 @@
+.app__navbar {
+  padding: 2rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.app__navbar__logo {
+  font-family: var(--font-base);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 57.2px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.app__navbar__logo {
+  color: var(--color-white);
+}
+
+.app__navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.app__navbar__links p {
+  color: var(--color-white);
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.app__navbar__sign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app__navbar__sign__container {
+  padding-right: 1rem;
+  margin: 1px solid #ffffff;
+  position: relative;
+}
+
+.app__navbar__sign__container::before {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 1px;
+  background: linear-gradient(
+    181deg,
+    rgba(12, 12, 12, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(12, 12, 12, 1) 100%
+  );
+  right: 0;
+  top: -50%;
+}
+
+.app__navbar_sign-book-table {
+  padding-left: 1rem;
+}
+
+.app__navbar__sign span,
+.app__navbar__sign p,
+.app__navbar-menu__sign span {
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: var(--color-white);
+}
+
+/* NAVBAR MENU */
+.app__navbar-menu {
+  display: none;
+}
+.app__navbar-menu__sign {
+  display: none;
+}
+
+.app__navbar-menu__links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 90px;
+  background-color: var(--color-black);
+  width: 250px;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.app__navbar-menu__links p,
+.app__navbar-menu_sign-book-table p {
+  color: var(--color-white);
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+@media screen and (max-width: 1050px) {
+  .app__navbar {
+    padding: 2rem 4rem;
+  }
+  .app__navbar-menu {
+    display: flex;
+  }
+  .app__navbar__links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app__navbar__sign {
+    display: none;
+  }
+  .app__navbar-menu__sign {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app__navbar {
+    padding: 2rem 2rem;
+  }
+}
