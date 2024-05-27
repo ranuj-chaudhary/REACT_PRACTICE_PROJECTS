@@ -81,6 +81,7 @@
 /* NAVBAR MENU */
 .app__navbar-menu {
   display: none;
+ 
 }
 .app__navbar-menu__sign {
   display: none;
@@ -96,6 +97,7 @@
   width: 250px;
   padding: 2rem;
   gap: 2rem;
+  box-shadow: 0 2px 8px #dcca8795;
 }
 
 .app__navbar-menu__links p,

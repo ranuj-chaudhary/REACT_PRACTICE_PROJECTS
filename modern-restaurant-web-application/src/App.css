@@ -51,7 +51,7 @@
 .app__wrapper_img img {
   width: 80%;
 }
-
+/* 
 .custom__button {
   background-color: var(--color-crimson);
     color: var(--color-black);
@@ -65,7 +65,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-}
+} */
 
 .p__cormorant {
   font-family: var(--font-base);
