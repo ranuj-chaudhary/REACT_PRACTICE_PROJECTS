@@ -1,11 +1,44 @@
-import React from 'react';
+import React from "react";
+import "./AboutUs.css";
+import { images } from "../../constants/index";
+import subHeadings from "../../components/SubHeading/SubHeading";
+const AboutUs = () => {
+  const { SubHeading, MinSubHeading } = subHeadings;
 
-import './AboutUs.css';
+  const { spoon, G, knife } = images;
+  return (
+    <div className="gericht__aboutus section__padding flex__center">
+      <div className="gericht__aboutus__container">
+        <div className="gericht__aboutus__title">
+          <SubHeading title={"About us"} imageUrl={spoon} />
+          <p className="p__opensans">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+            pharetra adipiscing ultrices vulputate posuere tristique. In sed
+            odio nec aliquet eu proin mauris et.
+          </p>
+          <button type="button" className="custom__button">
+            Know More
+          </button>
+        </div>
 
-const AboutUs = () => (
-  <div>
-    AboutUs
-  </div>
-);
+        <div className="gericht__aboutus__history">
+          <SubHeading title={"Our History"} imageUrl={spoon} />
+          <p className="p__opensans">
+            Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat.
+            Risus placerat morbi volutpat habitasse interdum mi aliquam In sed
+            odio nec aliquet.
+          </p>
+          <button type="button" className="custom__button">
+            Know More
+          </button>
+        </div>
+      </div>
+      <div className="gericht__aboutus__background-image">
+        <img src={G} alt="" />
+      </div>
+      <img src={knife} className="gericht__aboutus__knife" alt="" />
+    </div>
+  );
+};
 
 export default AboutUs;
