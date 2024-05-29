@@ -13,12 +13,13 @@
 }
 
 .gericht__aboutus__background-image img {
-  width: 40%;
-  height: 40%;
+  max-width: 400px;
+ height: auto;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: block;
 }
 
 .gericht__aboutus__title {
@@ -58,7 +59,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .gericht__aboutus  {
+  .gericht__aboutus {
     padding: 2rem 4rem !important;
   }
   .gericht__aboutus__container {
@@ -76,10 +77,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .gericht__aboutus__container{
+  .gericht__aboutus__container {
     gap: 10rem;
   }
-  .gericht__aboutus  {
+  .gericht__aboutus {
     padding: 2rem 2rem !important;
   }
   .gericht__subheading__title h2 {
@@ -91,14 +92,13 @@
     font-size: 14px;
     line-height: 20px;
   }
- 
 }
 
 @media screen and (max-width: 550px) {
-  .gericht__aboutus__container{
+  .gericht__aboutus__container {
     gap: 2rem;
   }
-  .gericht__aboutus__container{
+  .gericht__aboutus__container {
     flex-direction: column;
   }
   .gericht__aboutus .gericht__aboutus__knife {
@@ -111,11 +111,6 @@
   }
 
   .gericht__aboutus__background-image img {
-    width: 50%;
-    height: 30%;
+    max-width: 300px;
   }
-
- 
 }
-
-
