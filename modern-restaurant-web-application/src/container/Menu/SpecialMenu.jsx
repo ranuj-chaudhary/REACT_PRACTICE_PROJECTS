@@ -9,23 +9,42 @@ const SpecialMenu = function () {
   const { MinSubHeading } = SubHeadings;
   const { spoon, menu } = images;
   const { wines, cocktails } = data;
-
   console.log(wines);
   return (
-    <div className="gericht__special-menu section__menu flex__center">
+    <div className="gericht__special-menu section__menu section__padding">
       <div className="gericht__special-menu__heading">
-        <MinSubHeading minSubHeading={`Today’s Special`} imageUrl={spoon} />
-        <h2>Today’s Special</h2>
+        <div className="gericht__special__subheading">
+          <p>Menu that fits you palatte</p>
+          <img src={spoon} alt="spoon" />
+        </div>
+        <h2>Today's Special</h2>
       </div>
-      <div className="gericht__special-menu__image">
-        <img src={menu} alt="" />
-      </div>
+
       <div className="gericht__special-menu__menu">
         <div className="gericht__special-menu__wine-beer-menu">
-          <MenuItem />
+          <h3>Wine & Beer</h3>
+          {wines.map((item, idx) => (
+            <MenuItem
+              title={item.title}
+              price={item.price}
+              tags={item.tags}
+              key={wines.title}
+            />
+          ))}
+        </div>
+        <div className="gericht__special-menu__image">
+          <img src={menu} alt="" />
         </div>
         <div className="gericht__special-menu__cocktails-menu">
-          <MenuItem />
+          <h3>Cocktails</h3>
+          {cocktails.map((item, idx) => (
+            <MenuItem
+              title={item.title}
+              price={item.price}
+              tags={item.tags}
+              key={wines.title}
+            />
+          ))}
         </div>
       </div>
     </div>
