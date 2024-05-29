@@ -7,7 +7,6 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  
 }
 .app__header__heading {
   padding: 2rem;
@@ -31,7 +30,6 @@
 .app__header__image img {
   width: 100%;
   height: 100%;
-
 }
 
 .app__header__heading,
@@ -59,7 +57,9 @@
     padding: 2rem 4rem !important;
   }
   .app__header__container {
-flex-direction: column;    }
+    flex-direction: column;
+    width: 100%;
+  }
   .app__header__heading h1 {
     font-size: 72px;
     line-height: 90px;
@@ -68,20 +68,29 @@ flex-direction: column;    }
   .app__header__heading p {
     width: 100%;
   }
+  .gericht__aboutus__title h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .app__header {
-      padding: 2rem 2rem !important;
-    }
-    .app__header__container {
-      flex-direction: column;
-      gap: 4rem;
-    }
-    .app__header__heading h1 {
-      font-size: 62px;
-      line-height: 80px;
-      width: 100%;
-    }
+  .app__header {
+    padding: 2rem 2rem !important;
   }
-  
+  .app__header__container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .app__header__heading {
+    padding: 0;
+  }
+  .app__header__heading h1 {
+    font-size: 52px;
+    line-height: 80px;
+    width: 100%;
+  }
+
+
+
+}
