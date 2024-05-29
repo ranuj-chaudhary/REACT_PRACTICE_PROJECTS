@@ -1,6 +1,7 @@
 .gpt3__header {
   display: flex;
   flex-direction: row;
+  margin-top: 128px;
 }
 
 .gpt3__header__content {
@@ -143,7 +144,7 @@
     font-size: 48px;
     line-height: 60px;
   }
- 
+
   .gpt3__header__content p:first-child {
     font-size: 18px;
     line-height: 24px;
@@ -154,12 +155,11 @@
   .gpt3__header__input input::placeholder {
     font-size: 16px;
     line-height: 24px;
-
   }
 
   .gpt3__header__people {
     flex-direction: column;
-   }
+  }
 
   .gpt3__header__people p {
     text-align: center;
@@ -167,11 +167,11 @@
 }
 
 @media screen and (max-width: 550px) {
-.gradient__text {
+  .gradient__text {
     font-size: 32px;
     line-height: 52px;
   }
- 
+
   .gpt3__header__content p {
     font-size: 14px;
     line-height: 24px;
