@@ -1,3 +1,6 @@
+.gericht__special-menu {
+  background-color:var(--color-black);
+}
 .gericht__special-menu__menu {
   display: flex;
   justify-content: center;
