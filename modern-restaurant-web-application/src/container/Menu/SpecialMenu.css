@@ -1,5 +1,5 @@
 .gericht__special-menu {
-  background-color:var(--color-black);
+  background-color: var(--color-black);
 }
 .gericht__special-menu__menu {
   display: flex;
@@ -108,4 +108,6 @@
   .app__menuitem__tags p {
     font-size: 14px !important;
   }
+
+
 }

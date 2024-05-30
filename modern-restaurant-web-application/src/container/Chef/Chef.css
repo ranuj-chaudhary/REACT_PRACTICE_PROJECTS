@@ -1,0 +1,96 @@
+.gericht__chef {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.gericht__chef__image,
+.gericht__chef__content {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+}
+
+.gericht__chef__image img {
+  width: 100%;
+  height: auto;
+}
+
+.gericth__chef__subheading h5 {
+  font-family: var(--font-base);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 29.9px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: var(--color-white);
+}
+
+.gericth__chef__title h2 {
+  font-family: var(--font-base);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 83.2px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--color-golden);
+  text-transform: capitalize;
+}
+.gericth__chef__title p {
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  margin: 1rem 0 4rem;
+  width: 80%;
+}
+
+.gericth__chef__author {
+  font-family: var(--color-base);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: var(--color-golden);
+}
+.gericth__chef__author span {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  color: var(--color-grey);
+}
+
+.gericth__chef__author img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .gericht__chef {
+    padding: 2rem 4rem !important;
+  }
+  .gericht__chef__image,
+  .gericht__chef__content {
+    padding: 0;
+  }
+  .gericth__chef__title h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gericht__chef {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}
