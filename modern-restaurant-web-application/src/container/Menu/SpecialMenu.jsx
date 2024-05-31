@@ -6,10 +6,8 @@ import { data } from "../../constants";
 import { MenuItem } from "../../components";
 
 const SpecialMenu = function () {
-  const { MinSubHeading } = SubHeadings;
   const { spoon, menu } = images;
   const { wines, cocktails } = data;
-  console.log(wines);
   return (
     <div className="gericht__special-menu section__menu section__padding">
       <div className="gericht__special-menu__heading">
@@ -28,7 +26,7 @@ const SpecialMenu = function () {
               title={item.title}
               price={item.price}
               tags={item.tags}
-              key={wines.title}
+              key={`${item.title}${idx}`}
             />
           ))}
         </div>
@@ -42,7 +40,7 @@ const SpecialMenu = function () {
               title={item.title}
               price={item.price}
               tags={item.tags}
-              key={wines.title}
+              key={`${wines.title}${idx}`}
             />
           ))}
         </div>

@@ -30,7 +30,7 @@ a {
 }
 
 
-
+/* 
 .custom__button {
   background-color: var(--color-crimson);
     color: var(--color-black);
@@ -44,7 +44,7 @@ a {
     border: none;
     outline: none;
     cursor: pointer;
-}
+} */
 
 
 @-webkit-keyframes slide-bottom {

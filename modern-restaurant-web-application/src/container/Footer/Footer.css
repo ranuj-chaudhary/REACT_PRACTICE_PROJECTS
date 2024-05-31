@@ -1,0 +1,123 @@
+/* FOOTER LINKS */
+.gericht__footer__links__container {
+  margin-top: 4rem;
+}
+
+.gericht__footer__list h4 {
+  font-family: var(--font-base);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 41.6px;
+  letter-spacing: 0.04em;
+  color: var(--color-crimson);
+}
+
+.gericht__footer__links {
+  display: flex;
+  justify-content: space-between;
+}
+.gericht__footer__list p {
+  text-align: center;
+}
+.gericht__footer__list {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: f;
+}
+
+.gericht__footer__links h2 {
+  margin-bottom: 1rem;
+}
+.gericht__footer__list h4 {
+  text-align: center;
+  line-height: 83.2px;
+}
+
+.gericht__footer__list p {
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  color: var(--color-grey);
+  margin-top: 1px;
+}
+.gericht__footer__list img {
+  margin: 10px 0;
+}
+
+.gericht__footer__links__container > p {
+  text-align: center;
+  color: var(--color-grey);
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1380px) {
+  .gericht__footer__links {
+    gap: 6rem;
+  }
+  .gericht__footer__newletter-heading h2 {
+    font-size: 52px;
+    line-height: 60px;
+  }
+  /* .gericht__footer__list h4 {
+    text-align: center;
+    line-height: 40px;
+  } */
+}
+
+@media screen and (max-width: 1050px) {
+  .gericht__footer {
+    padding: 2rem 4rem !important;
+  }
+  .gericht__footer__newletter-heading h2 {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .gericht__footer__list h4 {
+    font-size: 24px;
+    line-height: 60px;
+  }
+
+  .gericht__footer__subheading h5 {
+    font-size: 20px;
+  }
+  .gericht__footer__newletter-heading p {
+    font-size: 14px;
+  }
+  .gericht__footer__links {
+    gap: 2rem;
+  }
+  .gericht__footer__links h2 {
+    font-size: 48px;
+  }
+  .gericht__footer__list p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gericht__footer__links {
+    gap: 1rem;
+  }
+  .gericht__footer__newletter-heading h2 {
+    font-size: 32px;
+  }
+  .gericht__footer {
+    padding: 2rem 2rem !important;
+  }
+  .gericht__footer__newletter-heading {
+    margin: 0 1rem;
+  }
+  .gericht__footer__newletter-heading {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gericht__footer__links {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+/* FOOTER NEWSLETTER */
+.gericht__footer__newletter__container {
+  background-color: var(--color-black);
+  width: fit-content;
+  padding: 2rem;
+  width: 100%;
+}
+.gericht__footer__newletter-heading {
+  margin: auto;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.gericht__footer__newletter-input {
+  flex: 1;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.gericht__footer__newletter-input input {
+  flex: 2;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--color-crimson);
+}
+.gericht__footer__newletter-input button {
+  flex: 0.4;
+  color: var(--color-black);
+  background-color: var(--color-golden);
+  font-size: 16px;
+  padding: 12px 6px;
+  border-radius: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+ .gericht__footer__newletter-input {
+  gap: 1rem;
+ }
+  .gericht__footer__newletter-input input, 
+  .gericht__footer__newletter-input button {
+    flex: 1;
+  }
+}
