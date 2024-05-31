@@ -87,10 +87,14 @@
     font-size: 48px;
     line-height: 60px;
   }
+  .gericth__chef__title p {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .gericht__chef {
     flex-direction: column;
     margin-top: 2rem;
+    padding: 2rem 2rem !important;
   }
 }

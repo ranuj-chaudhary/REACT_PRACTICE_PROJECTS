@@ -4,7 +4,6 @@ import { images } from "../../constants/index";
 
 const Chef = () => {
   const { chef, spoon, sign } = images;
-  console.log(chef);
   return (
     <div className="gericht__chef section__padding">
       <div className="gericht__chef__image">
