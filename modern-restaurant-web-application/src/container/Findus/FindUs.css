@@ -1,0 +1,51 @@
+.gericht__findus {
+  gap: 2rem;
+}
+
+.gericht__findus__heading,
+.gericht__findus__image {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.gericht__findus__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gericht__findus__heading > p {
+  margin: 4rem 0 2rem;
+}
+
+.gericht__findus__address-time p {
+  margin: 1rem 0;
+}
+.gericht__findus__address-time h5 {
+  color: var(--color-golden) !important;
+}
+
+@media screen and (max-width: 1050px) {
+  .gericht__findus {
+    padding: 2rem 4rem !important;
+  }
+
+  .gericht__findus__heading > p {
+    margin: 2rem 0 1rem;
+  }
+  .gericht__findus__address-time h2 {
+    font: 52px;
+    line-height: 70px;
+  }
+
+  .gericht__findus__address-time p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gericht__findus {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
