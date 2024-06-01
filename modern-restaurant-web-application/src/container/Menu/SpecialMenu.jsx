@@ -11,11 +11,11 @@ const SpecialMenu = function () {
   return (
     <div className="gericht__special-menu section__menu section__padding">
       <div className="gericht__special-menu__heading">
-        <div className="gericht__special__subheading">
-          <p>Menu that fits you palatte</p>
+        <div className="gericht__special__subheading flex__center">
+          <p className="p__cormorant">Menu that fits you palatte</p>
           <img src={spoon} alt="spoon" />
         </div>
-        <h2>Today's Special</h2>
+        <h2 className="headtext__cormorant">Today's Special</h2>
       </div>
 
       <div className="gericht__special-menu__menu">
@@ -44,6 +44,11 @@ const SpecialMenu = function () {
             />
           ))}
         </div>
+      </div>
+      <div className="gericht__special-menu__button-container">
+        <button type="button" className="custom__button">
+          View More
+        </button>
       </div>
     </div>
   );

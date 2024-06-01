@@ -1,7 +1,7 @@
 /* FOOTER LINKS */
-.gericht__footer__links__container {
+ .gericht__footer__links__container {
   margin-top: 4rem;
-}
+} 
 
 .gericht__footer__list h4 {
   font-family: var(--font-base);
@@ -19,6 +19,7 @@
 .gericht__footer__list p {
   text-align: center;
 }
+
 .gericht__footer__list {
   flex: 1;
   display: flex;

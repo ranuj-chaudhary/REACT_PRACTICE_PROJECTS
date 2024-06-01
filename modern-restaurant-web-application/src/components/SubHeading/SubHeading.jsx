@@ -4,7 +4,7 @@ import "./subheading.css";
 const SubHeading = ({ title = null, imageUrl = null }) => {
   return (
     <div className="gericht__subheading__title">
-      {title && <h2>{title}</h2>}
+      {title && <h2 className="headtext__cormorant">{title}</h2>}
       {imageUrl && <img src={imageUrl} alt="" />}
     </div>
   );
@@ -19,5 +19,4 @@ const MinSubHeading = ({ minSubHeading = null, imageUrl = null }) => {
   );
 };
 
-export default{SubHeading, MinSubHeading}
-
+export default { SubHeading, MinSubHeading };
