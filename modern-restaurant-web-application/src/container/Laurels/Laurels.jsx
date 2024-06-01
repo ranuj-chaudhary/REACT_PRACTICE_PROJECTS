@@ -3,7 +3,7 @@ import "./Laurels.css";
 import { images } from "../../constants/index";
 import { data } from "../../constants/index";
 const Laurels = () => {
-  const { laurels, spoon } = images;
+  const { laurels, spoon, logo } = images;
   const { awards } = data;
 
   return (
@@ -29,6 +29,9 @@ const Laurels = () => {
       </div>
       <div className="gericht__laurels__image">
         <img src={laurels} alt="" />
+      </div>
+      <div className="gericht__laurels__logo">
+        <img src={logo} alt="" />
       </div>
     </div>
   );
