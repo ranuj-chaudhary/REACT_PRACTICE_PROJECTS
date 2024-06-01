@@ -2,8 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   padding: 2rem 6rem;
+ 
+}
+
+.sticky__navbar {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  z-index: 99999;
 }
 
 .gericht__navbar__logo {
@@ -54,6 +62,7 @@
 /* NAVBAR MENU */
 .gericht__navbar-menu {
   display: none;
+  z-index: 999;
 }
 .gericht__navbar-menu__sign {
   display: none;

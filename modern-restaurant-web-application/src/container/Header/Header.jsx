@@ -1,12 +1,16 @@
-import React from "react";
 import { images } from "../../constants/index";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ isSelected, inView }) => {
   const { welcome, spoon } = images;
 
   return (
-    <div className="app__header section__padding">
+    <div
+      className={`app__header section__padding ${
+        inView ? "sticky__padding" : ""
+      }`}
+      ref={isSelected}
+    >
       <div className="app__header__container flex__center">
         <div className="app__header__heading">
           <div className="app__header__subheading">
@@ -21,14 +25,13 @@ const Header = () => {
           </p>
           <button className="custom__button">Explore Menu</button>
           <div className="app__header_hashtag">
-          <span>#Bar</span>
-          <span> #Gericht</span>
-        </div>
+            <span>#Bar</span>
+            <span> #Gericht</span>
+          </div>
         </div>
         <div className="app__header__image">
           <img src={welcome} alt="" />
         </div>
-       
       </div>
     </div>
   );

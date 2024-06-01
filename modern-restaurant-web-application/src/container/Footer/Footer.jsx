@@ -6,7 +6,7 @@ import Newsletter from "../../components/Footer/Newsletter";
 const Footer = () => {
   const { spoon } = images;
   return (    
-    <div className="gericht__footer section__padding ">
+    <div className="gericht__footer section__padding " id="footer">
       <Newsletter />
       <div className="gericht__footer__links__container">
         <div className="gericht__footer__links">
