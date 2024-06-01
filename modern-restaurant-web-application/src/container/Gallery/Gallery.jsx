@@ -6,7 +6,7 @@ import { images } from "../../constants/index";
 const Gallery = () => {
   const { spoon, gallery01, gallery02, gallery03, gallery04 } = images;
   return (
-    <div className="gericht__gallery">
+    <div className="gericht__gallery" id="gallery">
       <div className="gericht__gallery__heading">
         <h5>Instagram</h5>
         <img src={spoon} alt="" />

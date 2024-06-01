@@ -7,7 +7,7 @@ const AboutUs = () => {
 
   const { spoon, G, knife } = images;
   return (
-    <div className="gericht__aboutus section__padding flex__center">
+    <div className="gericht__aboutus section__padding flex__center" id="aboutus">
       <div className="gericht__aboutus__container">
         <div className="gericht__aboutus__title">
           <SubHeading title={"About us"} imageUrl={spoon} />

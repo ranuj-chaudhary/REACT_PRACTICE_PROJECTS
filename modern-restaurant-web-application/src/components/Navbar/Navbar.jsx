@@ -7,31 +7,32 @@ import "./Navbar.css";
 const Menu = () => {
   return (
     <>
-      <a href="#home">
+      <a href="#">
         <p>Home</p>
       </a>
-      <a href="#pages">
-        <p>Pages</p>
+      <a href="#gallery">
+        <p>Gallery</p>
       </a>
       <a href="#footer">
         <p>Contact Us</p>
       </a>
-      <a href="#blog">
-        <p>Blog</p>
+      <a href="#aboutus">
+        <p>About Us</p>
       </a>
-      <a href="#landing">
-        <p>Landing</p>
+      <a href="#menu">
+        <p>Menu</p>
       </a>
     </>
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ isSticky }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  console.log(isSticky);
   return (
-    <div className="gericht__navbar">
+    <div className={`gericht__navbar ${!isSticky ? "sticky__navbar" : ""}`} >
       <div className="gericht__navbar__logo">
-        <a href="">
+        <a href="#">
           <p>Gericht</p>
         </a>
       </div>

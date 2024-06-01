@@ -1,6 +1,5 @@
 import React from "react";
 import "./SpecialMenu.css";
-import SubHeadings from "../../components/SubHeading/SubHeading";
 import { images } from "../../constants";
 import { data } from "../../constants";
 import { MenuItem } from "../../components";
@@ -9,7 +8,10 @@ const SpecialMenu = function () {
   const { spoon, menu } = images;
   const { wines, cocktails } = data;
   return (
-    <div className="gericht__special-menu section__menu section__padding">
+    <div
+      className="gericht__special-menu section__menu section__padding"
+      id="menu"
+    >
       <div className="gericht__special-menu__heading">
         <div className="gericht__special__subheading flex__center">
           <p className="p__cormorant">Menu that fits you palatte</p>

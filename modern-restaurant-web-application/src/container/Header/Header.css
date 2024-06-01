@@ -1,10 +1,13 @@
-.app__header__container {
-  width: 100%;
+
+.sticky__padding {
+  padding-top: 7.625rem;
 }
+
 .app__header__heading {
   padding: 2rem;
   position: relative;
 }
+
 .app__header__heading h1 {
   font-family: var(--font-base);
   font-size: 90px;
