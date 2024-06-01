@@ -10,8 +10,8 @@ const Gallery = () => {
       <div className="gericht__gallery__heading">
         <h5>Instagram</h5>
         <img src={spoon} alt="" />
-        <h2 >Photo Gallery</h2>
-        <p>
+        <h2 className="headtext__cormorant">Photo Gallery</h2>
+        <p className="p__opensans">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
           mattis ipsum turpis elit elit scelerisque egestas mu.
         </p>

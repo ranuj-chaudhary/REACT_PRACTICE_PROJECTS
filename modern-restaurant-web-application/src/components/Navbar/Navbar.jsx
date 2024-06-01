@@ -29,17 +29,17 @@ const Menu = () => {
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className="app__navbar">
-      <div className="app__navbar__logo">
+    <div className="gericht__navbar">
+      <div className="gericht__navbar__logo">
         <a href="">
           <p>Gericht</p>
         </a>
       </div>
-      <div className="app__navbar__links">
+      <div className="gericht__navbar__links p__opensans">
         <Menu />
       </div>
-      <div className="app__navbar__sign">
-        <div className="app__navbar__sign__container">
+      <div className="gericht__navbar__sign p__opensans">
+        <div className="gericht__navbar__sign__container">
           <a href="">
             <span>Log In</span>
           </a>
@@ -48,13 +48,13 @@ const Navbar = () => {
             <span>Registration</span>
           </a>
         </div>
-        <div className="app__navbar_sign-book-table">
+        <div className="gericht__navbar_sign-book-table">
           <a href="">
             <p>Book Table</p>
           </a>
         </div>
       </div>
-      <div className="app__navbar-menu">
+      <div className="gericht__navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
             color="#dcca87"
@@ -69,10 +69,10 @@ const Navbar = () => {
           />
         )}
         {toggleMenu && (
-          <div className="app__navbar-menu__links">
+          <div className="gericht__navbar-menu__links p__opensans">
             <Menu />
-            <div className="app__navbar-menu__sign">
-              <div className="app__navbar-menu__sign__container">
+            <div className="gericht__navbar-menu__sign p__opensans">
+              <div className="gericht__navbar-menu__sign__container">
                 <a href="">
                   <span>Log In</span>
                 </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
                   <span>Registration</span>
                 </a>
               </div>
-              <div className="app__navbar-menu_sign-book-table">
+              <div className="gericht__navbar-menu_sign-book-table">
                 <a href="">
                   <p>Book Table</p>
                 </a>

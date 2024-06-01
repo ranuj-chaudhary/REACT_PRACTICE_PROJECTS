@@ -11,15 +11,6 @@
   fill: #dcca87;
 }
 
-.gericht__subheading__title h2 {
-  font-family: var(--font-alt);
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 83.2px;
-  letter-spacing: 0.03em;
-  color: var(--color-golden);
-}
-
 .gericht__minSubHeading p {
   font-family: var(--font-base);
   font-size: 23px;

@@ -6,6 +6,7 @@
 
   --color-golden: #dcca87;
   --color-black: #0c0c0c;
+  --color-light-black: #0C0B08;
   --color-gray: #545454;
   --color-crimson: #f5efdb;
   --color-grey: #aaaaaa;
@@ -29,8 +30,6 @@ a {
   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-
-/* 
 .custom__button {
   background-color: var(--color-crimson);
     color: var(--color-black);
@@ -44,8 +43,7 @@ a {
     border: none;
     outline: none;
     cursor: pointer;
-} */
-
+} 
 
 @-webkit-keyframes slide-bottom {
   0% {

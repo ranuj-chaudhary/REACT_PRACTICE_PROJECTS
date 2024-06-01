@@ -4,7 +4,7 @@ import { images } from "../../constants/index";
 const Newsletter = () => {
   const { spoon } = images;
   return (
-    <div className="gericht__footer__newletter__container ">
+    <div className="gericht__footer__newletter__container flex__center">
       <div className="gericht__footer__newletter-heading">
         <div className="gericht__footer__subheading">
           <h5 className="p__cormorant">Newsletter</h5>

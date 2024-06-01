@@ -7,12 +7,12 @@ const Laurels = () => {
   const { awards } = data;
 
   return (
-    <div className="gericht__laurels section__padding">
+    <div className="gericht__laurels section__padding flex__center">
       <div className="gericht__laurels__awards">
         <div className="gericht__laurels__heading">
-          <p>Awards & recognition</p>
+          <p className="p__cormorant">Awards & recognition</p>
           <img src={spoon} alt="" />
-          <h2>Our Laurels</h2>
+          <h2 className="headtext__cormorant">Our Laurels</h2>
         </div>
         <div className="gericht__laurels__awards__list">
           {awards.map((award, idx) => {
