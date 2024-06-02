@@ -5,7 +5,7 @@
 
 .gericht__aboutus__container {
   display: flex;
-  gap: 16rem;
+  gap: 12rem;
   width: 80%;
   z-index: 999;
   position: relative;
@@ -32,6 +32,7 @@
 
 .gericht__aboutus__title,
 .gericht__aboutus__history {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
