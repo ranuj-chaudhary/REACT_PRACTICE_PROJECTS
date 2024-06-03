@@ -1,10 +1,9 @@
 import React from "react";
 import "./links.css";
 
-const Links = ({ title, linkList }) => {
-  console.log(linkList);
+const Links = ({ title, linkList}) => {
   return (
-    <div className="gpt3__links">
+    <div className="gpt3__links" >
       <div className="gpt3__links__title">
         <p>{title}</p>
       </div>
@@ -13,7 +12,7 @@ const Links = ({ title, linkList }) => {
           {linkList.map((data, idx) => {
             return (
               <>
-                <a href={data.url}>
+                <a href={data.url} key={`${idx}${data.label}`}>
                   <li key={data.label + idx}>{data.label}</li>
                 </a>
               </>

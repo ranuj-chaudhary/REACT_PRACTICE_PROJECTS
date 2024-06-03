@@ -1,7 +1,9 @@
 .gpt3__header {
   display: flex;
   flex-direction: row;
-  margin-top: 128px;
+}
+.sticky__header__margin {
+  padding-top: 200px !important;
 }
 
 .gpt3__header__content {

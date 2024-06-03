@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../logo.svg";
-
 const Menu = () => {
   return (
     <>
@@ -25,11 +24,11 @@ const Menu = () => {
     </>
   );
 };
-const Navbar = () => {
+const Navbar = ({ inView }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="gpt3__navbar sticky" id="#">
+    <nav className={`gpt3__navbar ${!inView ? "sticky__navbar" : ""}`} id="#">
       <div className="gpt3__navbar__container">
         <div className="gpt3__navbar-links">
           <div className="gpt3__navbar-links_logo">

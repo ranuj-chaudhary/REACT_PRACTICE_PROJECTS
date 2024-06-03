@@ -1,15 +1,21 @@
 .gpt3__navbar {
-  /* nav bar at top property */
-  position: fixed;
-  z-index: 99999;
-  width: 100%;
-
-  background-color: var(--color-footer);
   display: flex;
   justify-content: space-between;
-
   padding: 2rem 6rem;
 }
+.body {
+  position: relative;
+}
+
+.sticky__navbar {
+  /* nav bar at top property */
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: var(--color-footer);
+  top: 0;
+}
+
 .gpt3__navbar__container {
   display: flex;
   align-items: center;
@@ -107,22 +113,6 @@
 }
 .gpt3__navbar-menu-sign {
   display: none;
-}
-
-.sticky{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 8rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  z-index: 999;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
-}
-
-.sticky .section-hero {
-  margin-top: 9.6rem;
 }
 
 @media screen and (max-width: 1050px) {

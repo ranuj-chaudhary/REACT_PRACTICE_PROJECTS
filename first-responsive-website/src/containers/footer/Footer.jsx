@@ -63,11 +63,10 @@ const linkData = [
       {
         label: "info@payme.net",
         url: "#",
-      }
+      },
     ],
   },
 ];
-
 
 const Footer = () => {
   return (
@@ -90,7 +89,11 @@ const Footer = () => {
         </div>
         <div className="gpt3__footer__links">
           {linkData.map((item, idx) => (
-            <Links title={item.heading} linkList={item.links} />
+            <Links
+              title={item.heading}
+              linkList={item.links}
+              key={` ${item.heading}${idx}`}
+            />
           ))}
         </div>
       </div>
