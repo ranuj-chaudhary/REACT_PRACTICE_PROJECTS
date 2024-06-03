@@ -2,9 +2,14 @@ import React from "react";
 import "./header.css";
 import photo from "../../assets/people.png";
 import headerImage from "../../assets/ai.png";
-const Header = () => {
+const Header = ({ inView, isSelected }) => {
   return (
-    <header className="gpt3__header section__padding">
+    <header
+      className={`gpt3__header section__padding ${
+        !inView ? "sticky__header__margin" : ""
+      }`}
+      ref={isSelected}
+    >
       <div className="gpt3__header__content">
         <h1 className="gradient__text">
           Let’s Build Something amazing with GPT-3 OpenAI
