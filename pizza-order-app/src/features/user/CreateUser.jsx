@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { useUser } from "../../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 function CreateUser() {
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState("");
+  const navigate = useNavigate();
+  const { dispatch } = useUser();
 
   function handleSubmit(e) {
     e.preventDefault();
+    dispatch({ type: "CREATE USER", payload: { username: name } });
+    navigate("/menu");
   }
 
   return (
@@ -14,13 +20,13 @@ function CreateUser() {
       <input
         type="text"
         placeholder="Your full name"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
       />
 
-      {username !== '' && (
+      {name !== "" && (
         <div>
-          <button>Start ordering</button>
+          <button type="submit">Start ordering</button>
         </div>
       )}
     </form>

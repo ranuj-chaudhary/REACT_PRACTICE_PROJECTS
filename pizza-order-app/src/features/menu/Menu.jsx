@@ -1,16 +1,14 @@
-import { useLoaderData, useNavigation } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { getMenu } from "../../services/apiRestaurant";
 import MenuItem from "./MenuItem";
 
 function Menu() {
   const menu = useLoaderData();
-  const navigation = useNavigation();
-  console.log(navigation);
-
+  
   return (
-    <ul>
+    <ul className="flex flex-col justify-center  bg-yellow-50">
       {menu.length > 0 &&
-        menu.map((pizza) => <MenuItem pizza={pizza} key={pizza.name} />)}
+        menu.map((pizza, idx) => <MenuItem pizza={pizza} key={idx} />)}
     </ul>
   );
 }
