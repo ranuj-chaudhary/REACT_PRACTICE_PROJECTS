@@ -9,6 +9,7 @@ import { Loader as menuLoader } from "./features/menu/Menu";
 import { Loader as orderLoader } from "./features/order/Order";
 import Cart from "./features/cart/Cart";
 import { action as updateOrderAction } from "./features/order/CreateOrder";
+import { UserProvider } from "./context/UserContext";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -47,7 +48,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <UserProvider>
+      <RouterProvider router={router} />;
+    </UserProvider>
+  );
 }
 
 export default App;

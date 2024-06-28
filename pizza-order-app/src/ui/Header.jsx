@@ -1,0 +1,27 @@
+import { useState } from "react";
+import SearchOrder from "../features/order/SearchOrder";
+import { useUser } from "../context/UserContext";
+
+const Header = function () {
+  const { username } = useUser();
+
+  return (
+    <header className="flex items-center justify-between bg-yellow-500 p-4">
+      <div className="logo">
+        <h2 className="">Fast React Pizza Co.</h2>
+      </div>
+      <div className="flex items-center justify-between gap-4">
+        <div className="searchOrder ">
+          <SearchOrder />
+        </div>
+        {username && (
+          <div className="user">
+            <p>Welcome, {username}</p>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
