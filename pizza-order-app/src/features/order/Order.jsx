@@ -1,10 +1,13 @@
 // Test ID: IIDSAT
 
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import {
   calcMinutesLeft,
   formatCurrency,
   formatDate,
 } from "../../utils/helpers";
+import { useState } from "react";
+import { getOrder } from "../../services/apiRestaurant";
 
 const order = {
   id: "ABCDEF",
@@ -42,7 +45,18 @@ const order = {
 };
 
 function Order() {
-  // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
+  // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address,
+  //  these are only for the restaurant staff
+  const [searchOrderId, setSearchOrderId] = useState("");
+  const order = useLoaderData();
+  console.log(order);
+  const navigate = useNavigate();
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    navigate(`/order/${searchOrderId}`);
+  }
+
   const {
     id,
     status,
@@ -58,6 +72,19 @@ function Order() {
     <div>
       <div>
         <h2>Status</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className=" mr-2 border border-gray-300 bg-gray-50 px-4 py-2"
+            value={searchOrderId}
+            onChange={(e) => setSearchOrderId(e.target.value)}
+          />
+          <input
+            type="submit"
+            className="bg-blue-600 px-4 py-2 text-white"
+            value="Search Order"
+          />
+        </form>
 
         <div>
           {priority && <span>Priority</span>}
@@ -81,6 +108,12 @@ function Order() {
       </div>
     </div>
   );
+}
+
+export async function Loader({ params }) {
+  const { orderId } = params;
+  const order = await getOrder(orderId);
+  return order;
 }
 
 export default Order;

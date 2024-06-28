@@ -1,3 +1,10 @@
+function formatCurrency(price) {
+  const finalPrice = new Intl.NumberFormat("en-IN", {
+    maximumSignificantDigits: 3,
+  }).format(price);
+  return finalPrice;
+}
+
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
@@ -5,8 +12,9 @@ function MenuItem({ pizza }) {
     <li>
       <img src={imageUrl} alt={name} />
       <div>
-        <p>{name}</p>
-        <p>{ingredients.join(', ')}</p>
+        <p>{name} </p>
+        <p>{id} </p>
+        <p>{ingredients.join(", ")}</p>
         <div>
           {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
         </div>
