@@ -14,31 +14,17 @@ function MenuItem({ pizza }) {
   const { dispatch } = useUser();
 
   const cartItem = {
-    id,
+    pizzaId: id,
     name,
     unitPrice,
     imageUrl,
     quantity,
+    totalPrice: unitPrice * quantity,
+    addIngredients: ingredients,
   };
 
-  useEffect(
-    function () {
-      if (quantity < 1) {
-        dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
-        setCurrentQuantity(0);
-        setQuantity(1);
-      } else if (quantity > 1) {
-        dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
-      }
-    },
-    [quantity]
-  );
-
   function handleAddToCart() {
-    if (!soldOut) {
-      setCurrentQuantity(1);
-      setQuantity(1);
-    }
+    setCurrentQuantity(1);
     dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
   }
 
@@ -59,14 +45,20 @@ function MenuItem({ pizza }) {
             <div className="button">
               <button
                 className="m-2 rounded-full bg-yellow-300 px-4 py-3"
-                onClick={() => setQuantity((quantity) => quantity - 1)}
+                onClick={() => {
+                  dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
+                  setQuantity((quantity) => quantity - 1);
+                }}
               >
                 -
               </button>
               <span>{quantity}</span>
               <button
                 className="m-2 rounded-full bg-yellow-300 px-4 py-3"
-                onClick={() => setQuantity((quantity) => quantity + 1)}
+                onClick={() => {
+                  setQuantity((quantity) => quantity + 1);
+                  dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
+                }}
               >
                 +
               </button>

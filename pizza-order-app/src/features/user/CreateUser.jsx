@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useUser } from "../../context/UserContext";
+import { CREATE_USER, useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function CreateUser() {
@@ -9,24 +9,32 @@ function CreateUser() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch({ type: "CREATE USER", payload: { username: name } });
+    dispatch({ type: CREATE_USER, payload: { username: name } });
     navigate("/menu");
   }
 
   return (
     <form onSubmit={handleSubmit}>
-      <p>👋 Welcome! Please start by telling us your name:</p>
-
+      <p>
+        👋 Welcome! Please start by telling us your name: {name.toUpperCase()}
+      </p>
       <input
         type="text"
         placeholder="Your full name"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        required
+        className=" mt-6 rounded-full border border-gray-300 border-slate-500 bg-gray-50 bg-yellow-100 px-4 py-2"
       />
 
       {name !== "" && (
         <div>
-          <button type="submit">Start ordering</button>
+          <button
+            type="submit"
+            className="mt-4 rounded-full bg-yellow-300 px-8 py-4"
+          >
+            Start ordering
+          </button>
         </div>
       )}
     </form>
