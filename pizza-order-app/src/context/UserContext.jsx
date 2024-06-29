@@ -21,23 +21,21 @@ function reducer(state, action) {
       const name = action.payload.username;
       return {
         ...state,
-        username: name.slice(0, 1).toUpperCase() + name.slice(1),
+        username: name.toUpperCase(),
         orderDateTime: time,
       };
     case INSERT_CART_ITEM:
-      
-
-
       const itemExist = state.cart.filter(
-        (item) => item.id == action.payload.id
+        (item) => item.pizzaId == action.payload.pizzaId
       );
+
       if (itemExist.length > 0) {
         const updatedCart = state.cart
           .map((item) => {
-            if (item.id == action.payload.id) {
+            if (item.pizzaId == action.payload.pizzaId) {
               return {
                 ...item,
-                quantity: action.payload.quantity,
+                ...action.payload,
               };
             } else {
               return item;
@@ -56,14 +54,18 @@ function reducer(state, action) {
         };
       }
     case REMOVE_CURRENT_ITEM:
-      const index = state.cart.findIndex(
-        (element) => element.id == action.payload.id
+      const removedItem = state.cart.filter(
+        (element) => element.pizzaId !== action.payload.id
       );
-      const removedItem = state.cart.splice(index, 1);
 
       return {
         ...state,
-        cart: [...state.cart],
+        cart: [...removedItem],
+      };
+    case EMPTY_CART:
+      return {
+        ...state,
+        cart: [],
       };
     default:
       return state;
@@ -71,10 +73,10 @@ function reducer(state, action) {
 }
 
 function UserProvider({ children }) {
-  const [{ username }, dispatch] = useReducer(reducer, initialUserState);
+  const [{ username, cart }, dispatch] = useReducer(reducer, initialUserState);
 
   return (
-    <UserContext.Provider value={{ username, dispatch }}>
+    <UserContext.Provider value={{ username, dispatch, cart }}>
       {children}
     </UserContext.Provider>
   );

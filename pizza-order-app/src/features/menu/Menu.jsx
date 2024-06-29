@@ -4,7 +4,7 @@ import MenuItem from "./MenuItem";
 
 function Menu() {
   const menu = useLoaderData();
-  
+
   return (
     <ul className="flex flex-col justify-center  bg-yellow-50">
       {menu.length > 0 &&
