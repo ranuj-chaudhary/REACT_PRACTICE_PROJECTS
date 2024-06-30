@@ -43,9 +43,11 @@ function reducer(state, action) {
     case INCREASE_ITEM_QUANTITY:
       const updatedCart = state.cart.map((item) => {
         if (item.pizzaId == action.payload.id) {
+          const updatedQuantity = item.quantity + 1;
           return {
             ...item,
-            quantity: item.quantity + 1,
+            quantity: updatedQuantity,
+            totalPrice: updatedQuantity * item.unitPrice,
           };
         } else {
           return item;
@@ -61,9 +63,11 @@ function reducer(state, action) {
       const newCart = state.cart
         .map((item) => {
           if (item.pizzaId == action.payload.id) {
+            const updatedQuantity = item.quantity - 1;
             return {
               ...item,
-              quantity: item.quantity - 1,
+              quantity: updatedQuantity,
+              totalPrice: updatedQuantity * item.unitPrice,
             };
           } else {
             return item;
