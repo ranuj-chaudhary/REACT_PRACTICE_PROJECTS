@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Form, redirect, useActionData, useNavigate } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 import { useUser } from "../../context/UserContext";
+import Button from "../../ui/Button";
 
 // https://uibakery.io/regex-library/phone-number
 
@@ -74,9 +75,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button className="mt-4 rounded-xl bg-yellow-300 px-8 py-4">
-            Order now
-          </button>
+          <Button type="primary">Order now</Button>
         </div>
       </Form>
     </div>

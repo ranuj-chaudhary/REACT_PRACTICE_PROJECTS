@@ -3,12 +3,14 @@ import { formatDate } from "../utils/helpers";
 
 export const CREATE_USER = "CREATE_USER";
 export const INSERT_CART_ITEM = "INSERT_CART_ITEM";
+export const DECREASE_ITEM_QUANTITY = "DECREASE_ITEM_QUANTITY";
+export const INCREASE_ITEM_QUANTITY = "INCREASE_ITEM_QUANTITY";
 export const EMPTY_CART = "EMPTY_CART";
 export const REMOVE_CURRENT_ITEM = "REMOVE_CURRENT_ITEM";
 
 const initialUserState = {
   username: "",
-  orderDateTime: null,
+  orderDateTime: new Date(),
   cart: [],
 };
 
@@ -25,48 +27,62 @@ function reducer(state, action) {
         orderDateTime: time,
       };
     case INSERT_CART_ITEM:
-      const itemExist = state.cart.filter(
-        (item) => item.pizzaId == action.payload.pizzaId
-      );
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
 
-      if (itemExist.length > 0) {
-        const updatedCart = state.cart
-          .map((item) => {
-            if (item.pizzaId == action.payload.pizzaId) {
-              return {
-                ...item,
-                ...action.payload,
-              };
-            } else {
-              return item;
-            }
-          })
-          .filter((item) => item.quantity > 0);
-
-        return {
-          ...state,
-          cart: [...updatedCart],
-        };
-      } else {
-        return {
-          ...state,
-          cart: [...state.cart, action.payload],
-        };
-      }
     case REMOVE_CURRENT_ITEM:
       const removedItem = state.cart.filter(
-        (element) => element.pizzaId !== action.payload.id
+        (item) => item.pizzaId !== action.payload.id
       );
-
       return {
         ...state,
         cart: [...removedItem],
       };
+    case INCREASE_ITEM_QUANTITY:
+      const updatedCart = state.cart.map((item) => {
+        if (item.pizzaId == action.payload.id) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        } else {
+          return item;
+        }
+      });
+
+      return {
+        ...state,
+        cart: [...updatedCart],
+      };
+
+    case DECREASE_ITEM_QUANTITY:
+      const newCart = state.cart
+        .map((item) => {
+          if (item.pizzaId == action.payload.id) {
+            return {
+              ...item,
+              quantity: item.quantity - 1,
+            };
+          } else {
+            return item;
+          }
+        })
+        .filter((item) => item.quantity > 0);
+
+      return {
+        ...state,
+        cart: [...newCart],
+      };
+
     case EMPTY_CART:
       return {
         ...state,
         cart: [],
       };
+    case "GET_STATE":
+      return { ...state };
     default:
       return state;
   }
