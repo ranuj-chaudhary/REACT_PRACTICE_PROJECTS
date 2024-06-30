@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import { formatCurrency } from "../../utils/helpers";
 import DeleteCartItem from "../cart/DeleteCartItem";
 import UpdateCartButton from "../cart/UpdateCartButton";
 import UpdateItemQuantity from "../cart/UpdateItemQuantityButton";
+import { useUser } from "../../context/UserContext";
 
-function MenuItem({ pizza }) {
+function MenuItem({ pizza, getItemById }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
-  const [currentQuantity, setCurrenQuantity] = useState(0);
+  const [currentQuantity, setCurrentQuantity] = useState(0);
 
   const cartItem = {
     pizzaId: id,
@@ -35,12 +36,23 @@ function MenuItem({ pizza }) {
 
           <div className="flex">
             {currentQuantity > 0 && (
-              <UpdateItemQuantity id={id} currentQuantity={1} />
+              <UpdateItemQuantity
+                id={id}
+                setCurrentQuantity={setCurrentQuantity}
+              />
             )}
+            {/* CART BUTTON */}
             <div className="m-2">
               {currentQuantity == 0 && !soldOut ? (
-                <UpdateCartButton cartItem={cartItem} />
+                <UpdateCartButton
+                  cartItem={cartItem}
+                  setCurrentQuantity={setCurrentQuantity}
+                  id={id}
+                />
               ) : null}
+
+              {/* DELETE CART ITEM BUTTON */}
+
               {currentQuantity > 0 && (
                 <DeleteCartItem type={"primary"} id={id} />
               )}
@@ -52,4 +64,4 @@ function MenuItem({ pizza }) {
   );
 }
 
-export default MenuItem;
+export default memo(MenuItem);
