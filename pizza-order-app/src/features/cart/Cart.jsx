@@ -26,6 +26,7 @@ const fakeCart = [
 ];
 import CartItem from "./CartItem";
 import { EMPTY_CART } from "../../context/UserContext";
+import Button from "../../ui/Button";
 
 function Cart() {
   const { cart, dispatch } = useUser();
@@ -36,9 +37,7 @@ function Cart() {
 
   return (
     <div className="p-6">
-      <Link to="/menu" className="font-bold">
-        &larr; Back to menu
-      </Link>
+      <Button to="/menu">&larr; Back to menu</Button>
 
       <ul className="flex flex-col justify-center gap-6 py-6">
         {cart.map((item, idx) => (
@@ -52,19 +51,13 @@ function Cart() {
       </ul>
 
       {cart.length != 0 && (
-        <div className="flex items-end justify-end gap-8">
-          <Link
-            to="/order/new"
-            className="mt-4 rounded-full bg-yellow-300 px-8 py-4"
-          >
+        <div className="flex items-end justify-end gap-2">
+          <Button to="/order/new" type="link">
             Order pizzas
-          </Link>
-          <button
-            onClick={handleEmptyCart}
-            className="mt-4 rounded-full bg-yellow-300 px-8 py-4"
-          >
+          </Button>
+          <Button onClick={handleEmptyCart} type="primary">
             Clear cart
-          </button>
+          </Button>
         </div>
       )}
     </div>

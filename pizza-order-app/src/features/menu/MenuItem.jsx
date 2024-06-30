@@ -1,93 +1,55 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { formatCurrency } from "../../utils/helpers";
-import { getOrder } from "../../services/apiRestaurant";
-import { useUser } from "../../context/UserContext";
-import {
-  INSERT_CART_ITEM,
-  REMOVE_CURRENT_ITEM,
-} from "../../context/UserContext";
+import DeleteCartItem from "../cart/DeleteCartItem";
+import UpdateCartButton from "../cart/UpdateCartButton";
+import UpdateItemQuantity from "../cart/UpdateItemQuantityButton";
 
 function MenuItem({ pizza }) {
-  const [quantity, setQuantity] = useState(1);
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
-  const [currentQuantity, setCurrentQuantity] = useState(0);
-  const { dispatch } = useUser();
+  const [currentQuantity, setCurrenQuantity] = useState(0);
 
   const cartItem = {
     pizzaId: id,
     name,
     unitPrice,
     imageUrl,
-    quantity,
-    totalPrice: unitPrice * quantity,
+    quantity: 1,
+    totalPrice: unitPrice * 1,
     addIngredients: ingredients,
   };
 
-  function handleAddToCart() {
-    setCurrentQuantity(1);
-    dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
-  }
-
-  function handleDeleteFromCart() {
-    setCurrentQuantity(0);
-    dispatch({ type: REMOVE_CURRENT_ITEM, payload: { id } });
-  }
-
   return (
-    <li className="flex p-6">
-      <img src={imageUrl} alt={name} />
-      <div className="p-6">
-        <p>{name} </p>
-        <p>{ingredients.join(", ")}</p>
-        {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
-        <div className="flex gap-6">
-          {currentQuantity > 0 && (
-            <div className="button">
-              <button
-                className="m-2 rounded-full bg-yellow-300 px-4 py-3"
-                onClick={() => {
-                  dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
-                  setQuantity((quantity) => quantity - 1);
-                }}
-              >
-                -
-              </button>
-              <span>{quantity}</span>
-              <button
-                className="m-2 rounded-full bg-yellow-300 px-4 py-3"
-                onClick={() => {
-                  setQuantity((quantity) => quantity + 1);
-                  dispatch({ type: INSERT_CART_ITEM, payload: cartItem });
-                }}
-              >
-                +
-              </button>
-            </div>
+    <li className="flex p-6 ">
+      <img src={imageUrl} alt={name} className="h-32 w-32" />
+      <div className="flex-1  p-6">
+        <p className="text-xl">{name} </p>
+        <p className="capitalize italic text-gray-500">
+          {ingredients.join(", ")}
+        </p>
+        <div className="flex items-center justify-between first-line:gap-6">
+          {!soldOut ? (
+            <p>{formatCurrency(unitPrice)}</p>
+          ) : (
+            <p className="font-bold text-red-600">Sold out</p>
           )}
-          <div className="m-2">
-            {currentQuantity == 0 && !soldOut ? (
-              <button
-                className="bg-yellow-300 p-4 uppercase"
-                onClick={handleAddToCart}
-              >
-                Add to Cart
-              </button>
-            ) : null}
+
+          <div className="flex">
             {currentQuantity > 0 && (
-              <button
-                className="bg-yellow-300 p-4 uppercase"
-                onClick={handleDeleteFromCart}
-              >
-                Delete
-              </button>
+              <UpdateItemQuantity id={id} currentQuantity={1} />
             )}
+            <div className="m-2">
+              {currentQuantity == 0 && !soldOut ? (
+                <UpdateCartButton cartItem={cartItem} />
+              ) : null}
+              {currentQuantity > 0 && (
+                <DeleteCartItem type={"primary"} id={id} />
+              )}
+            </div>
           </div>
         </div>
       </div>
     </li>
   );
 }
-async function loader() {
-  const order = await getOrder(id);
-}
+
 export default MenuItem;
