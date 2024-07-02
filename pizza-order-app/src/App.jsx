@@ -7,8 +7,8 @@ import Menu from "./features/menu/Menu";
 import Order from "./features/order/Order";
 import CreateOrder from "./features/order/CreateOrder";
 import NotFound from "./ui/NotFound";
-import { Loader as menuLoader } from "./features/menu/Menu";
-import { Loader as orderLoader } from "./features/order/Order";
+import { loader as menuLoader } from "./features/menu/Menu";
+import { loader as orderLoader } from "./features/order/Order";
 import Cart from "./features/cart/Cart";
 import { action as updateOrderAction } from "./features/order/CreateOrder";
 

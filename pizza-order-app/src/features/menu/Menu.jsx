@@ -13,7 +13,7 @@ function Menu() {
   );
 }
 
-export async function Loader() {
+export async function loader() {
   const data = await getMenu();
 
   return data;
