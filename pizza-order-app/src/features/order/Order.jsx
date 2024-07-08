@@ -67,7 +67,7 @@ function Order() {
         {priority && <p>Price priority: {formatCurrency(priorityPrice)}</p>}
         <p>To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
       </div>
-      <div className="my-6">
+      <div className="my-6 flex justify-center">
         <Button to={"/menu"}>Order Again</Button>
       </div>
     </div>
