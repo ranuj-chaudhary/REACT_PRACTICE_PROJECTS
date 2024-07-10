@@ -23,10 +23,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="gradient__bg" id="#home">
+      <header className="gradient__bg" id="#home">
         <Navbar inView={inView} />
         <Header inView={inView} isSelected={ref} />
-      </div>
+      </header>
       <Brand />
       <WhatGPT3 />
       <Features />
