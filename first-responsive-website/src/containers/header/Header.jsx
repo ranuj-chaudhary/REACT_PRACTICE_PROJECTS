@@ -4,11 +4,12 @@ import photo from "../../assets/people.png";
 import headerImage from "../../assets/ai.png";
 const Header = ({ inView, isSelected }) => {
   return (
-    <header
+    <div
       className={`gpt3__header section__padding ${
         !inView ? "sticky__header__margin" : ""
       }`}
       ref={isSelected}
+      id="hero__section"
     >
       <div className="gpt3__header__content">
         <h1 className="gradient__text">
@@ -30,9 +31,9 @@ const Header = ({ inView, isSelected }) => {
         </div>
       </div>
       <div className="gpt3__header__image">
-        <img src={headerImage} alt="ai image" />
+        <img src={headerImage} alt="A artificial intelligence fictional face." />
       </div>
-    </header>
+    </div>
   );
 };
 

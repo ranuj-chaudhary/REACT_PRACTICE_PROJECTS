@@ -1,6 +1,7 @@
 .gpt3__header {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 .sticky__header__margin {
   padding-top: 200px !important;

@@ -1,10 +1,8 @@
+/* MAIN NAVIGATION */
 .gpt3__navbar {
   display: flex;
   justify-content: space-between;
   padding: 2rem 6rem;
-}
-.body {
-  position: relative;
 }
 
 .sticky__navbar {
@@ -22,7 +20,7 @@
   justify-content: space-between;
   width: 100%;
 }
-.gpt3__navbar-links {
+.gpt3__navbar_links-container {
   display: flex;
   flex: 1;
 
@@ -38,10 +36,20 @@
   height: 16.02px;
 }
 
-.gpt3__navbar_links-container {
+.gpt3__navbar-links {
   display: flex;
+  list-style: none;
   flex-direction: row;
 }
+
+/* NAVBAR MENU */
+
+.gpt3__navbar-menu-links {
+  flex-direction: column;
+  list-style: none;
+  display: none;
+}
+
 .gpt3__navbar-menu svg {
   cursor: pointer;
 }
@@ -51,9 +59,8 @@
   align-items: center;
 }
 
-.gpt3__navbar p,
-.gpt3__navbar_container-sign p,
-.gpt3__navbar-menu_container-links p {
+.gpt3__navbar a,
+.gpt3__navbar_container-sign p {
   color: #ffffff;
   font-family: var(--font-family);
   font-size: 18px;
@@ -64,8 +71,8 @@
   cursor: pointer;
 }
 
-.gpt3__navbar_container-sign button,
-.gpt3__navbar-menu-sign button {
+.gpt3__navbar_container-sign .btn,
+.gpt3__navbar-menu-sign .btn {
   font-family: var(--font-family);
   background: #ff4820;
   border-radius: 5px;
@@ -87,25 +94,24 @@
   display: none;
 
   margin-left: 1rem;
-  position: relative;
 }
 
 .gpt3__navbar-menu_container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-
-  text-align: end;
+text-align: center;
   min-width: 210px;
   background-color: var(--color-footer);
   padding: 2rem;
   margin-top: 1rem;
   position: absolute;
-  top: 40px;
+  top: 4rem;
   right: 0;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
 }
 
 .gpt3__navbar-menu_container p {
@@ -116,8 +122,13 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .gpt3__navbar_links-container {
+  .gpt3__navbar-links {
     display: none;
+  }
+
+  .gpt3__navbar-menu-links {
+    display: flex;
+    gap: 2rem;
   }
 
   .gpt3__navbar-menu {
@@ -141,10 +152,15 @@
   }
 
   .gpt3__navbar-menu-sign {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
   }
 
   .gpt3__navbar-menu_container {
-    top: 20px;
+    top: 1rem;
+    width: 100%;
+    justify-content: center;
   }
 }

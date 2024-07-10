@@ -3,46 +3,48 @@ import React, { useState, useRef, useEffect } from "react";
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../logo.svg";
-const Menu = () => {
+
+const NavMenu = ({ customClass }) => {
   return (
-    <>
-      <p>
-        <a href="#">Home</a>
-      </p>
-      <p>
+    <ul className={customClass}>
+      <li>
+        <a href="#hero__section">Home</a>
+      </li>
+      <li>
         <a href="#what-is-gpt">What is Gpt</a>
-      </p>
-      <p>
+      </li>
+      <li>
         <a href="#open-ai">Open AI</a>
-      </p>
-      <p>
+      </li>
+      <li>
         <a href="#case-study">Case Study</a>
-      </p>
-      <p>
+      </li>
+      <li>
         <a href="#library">Library</a>
-      </p>
-    </>
+      </li>
+    </ul>
   );
 };
+
 const Navbar = ({ inView }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
     <nav className={`gpt3__navbar ${!inView ? "sticky__navbar" : ""}`} id="#">
       <div className="gpt3__navbar__container">
-        <div className="gpt3__navbar-links">
+        <div className="gpt3__navbar_links-container">
           <div className="gpt3__navbar-links_logo">
-            <a href="#">
+            <a href="#hero__section">
               <img src={logo} alt="" />
             </a>
           </div>
-          <div className="gpt3__navbar_links-container">
-            <Menu />
-          </div>
+          <NavMenu customClass={"gpt3__navbar-links"} />
         </div>
         <div className="gpt3__navbar_container-sign">
-          <p>Sign in</p>
-          <button type="button">Sign Up</button>
+          <a href="#home">Sign In</a>
+          <a href="#home" className="btn">
+            Sign Up
+          </a>
         </div>
         <div className="gpt3__navbar-menu">
           {toggleMenu ? (
@@ -62,12 +64,29 @@ const Navbar = ({ inView }) => {
           )}
           {toggleMenu && (
             <div className="gpt3__navbar-menu_container scale-up-center">
+              {toggleMenu ? (
+                <RiCloseLine
+                  color="white"
+                  size="2rem"
+                  className="gpt3__navbar-menu_menu-icon"
+                  onClick={() => setToggleMenu(false)}
+                />
+              ) : (
+                <RiMenu3Line
+                  color="white"
+                  size="2rem"
+                  className="gpt3__navbar-menu_menu-icon"
+                  onClick={() => setToggleMenu(true)}
+                />
+              )}
               <div className="gpt3__navbar-menu_container-links">
-                <Menu />
+                <NavMenu customClass={"gpt3__navbar-menu-links"} />
               </div>
               <div className="gpt3__navbar-menu-sign">
-                <p>Sign in</p>
-                <button type="button">Sign up</button>
+                <a href="#home">Sign In</a>
+                <a href="#home" className="btn">
+                  Sign Up
+                </a>
               </div>
             </div>
           )}
