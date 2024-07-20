@@ -2,7 +2,7 @@ import React from "react";
 import "./cta.css";
 const Cta = () => {
   return (
-    <section className="gpt3__Cta ">
+    <section className="gpt3__Cta section__padding">
       <div className="gpt3__Cta__container ">
         <div className="gpt3__Cta__heading">
           <p>Request Early Access to Get Started</p>

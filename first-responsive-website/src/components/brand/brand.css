@@ -1,11 +1,14 @@
+/* containers */
 .gpt3__brands {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  padding: 2rem 0;
 }
 
+/* html elements */
 .gpt3__brands div {
   flex: 1;
   max-width: 15rem;

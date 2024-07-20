@@ -11,15 +11,16 @@
   --color-blog: #042c54;
   --color-text: #81afdd;
   --color-subtext: #ff8a71;
-  --color-bg-btn: #f2702c;
-  --color-text-btn: #000000;
+  --color-bg-btn: #00CED1;
+  --color-text-btn: #121212;
 
   --font-xl: 6.2rem;
   --font-md: 3.4rem;
   --font-md-small: 2.4rem;
   --font-normal: 1.6rem;
   --font-sm: 1.2rem;
-
+  
+/* for all headings */
   --font-weight-xl: 800;
 
   --line-height-xl: 7.5rem;
@@ -30,12 +31,14 @@
   :root {
     --font-xl: 5.2rem;
     --line-height-xl: 6.5rem;
+    --font-md-small: 2rem;
   }
 }
 @media screen and (max-width: 768px) {
   :root {
     --font-xl: 4.2rem;
     --line-height-xl: 5.7rem;
+    --font-normal: 1.4rem;
   }
 }
 @media screen and (max-width: 550px) {

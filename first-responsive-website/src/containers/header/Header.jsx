@@ -21,7 +21,7 @@ const Header = ({ isSelected }) => {
         </p>
         <div className="gpt3__header__input">
           <input type="email" placeholder="Your Email Address" />
-          <button type="button">Get Started</button>
+          <button type="button" className="btn">Get Started</button>
         </div>
         <div className="gpt3__header__people">
           <img src={photo} alt="" />

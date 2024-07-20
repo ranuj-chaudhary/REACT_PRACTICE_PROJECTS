@@ -24,7 +24,7 @@ const WhatGPT3 = () => {
 
         <div className="gpt3__whatgpt3__uses">
           <div className="gpt3__whatgpt3__heading">
-            <h3>The possibilities are beyond your imagination</h3>
+            <h3 className="gradient__text">The possibilities are beyond your imagination</h3>
             <span>Explore The Library</span>
           </div>
           <div className="gpt3__whatgpt3__application">

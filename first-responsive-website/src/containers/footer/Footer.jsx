@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.css";
 import Links from "../../components/links/Links";
 import gptLogo from "../../logo.svg";
+
 const linkData = [
   {
     heading: "Links",
@@ -9,18 +10,22 @@ const linkData = [
       {
         label: "Overons",
         url: "#",
+        type: null,
       },
       {
         label: "Social Media",
         url: "#",
+        type: null,
       },
       {
         label: "Counters",
         url: "#",
+        type: null,
       },
       {
         label: "Contact",
         url: "#",
+        type: null,
       },
     ],
   },
@@ -30,18 +35,22 @@ const linkData = [
       {
         label: "Gallery",
         url: "#",
+        type: null,
       },
       {
         label: "Terms & Conditions",
         url: "#",
+        type: null,
       },
       {
         label: "Privacy Policy",
         url: "#",
+        type: null,
       },
       {
         label: "Contact",
         url: "#",
+        type: null,
       },
     ],
   },
@@ -51,18 +60,22 @@ const linkData = [
       {
         label: "Crechterwoord K12 182 DK Alknjkcb",
         url: "#",
+        type: "address",
       },
       {
-        label: "085-132567",
+        label: "+91-8755933763",
         url: "#",
+        type: "telephone",
       },
       {
         label: "info@payme.net",
         url: "#",
+        type: "email",
       },
       {
         label: "info@payme.net",
         url: "#",
+        type: "email",
       },
     ],
   },
