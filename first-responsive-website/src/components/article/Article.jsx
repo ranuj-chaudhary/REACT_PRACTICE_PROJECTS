@@ -1,22 +1,28 @@
 import React from "react";
 import "./article.css";
+import LazyLoad from "react-lazy-load";
 const Article = ({ title, imagUrl, date, gridClass }) => {
   return (
     <div className={`gpt3__article ${gridClass}`}>
       <div className="gpt3__article__image">
-        <img src={imagUrl} alt="" />
+        <LazyLoad offset={100} className="LazyLoad">
+          <img src={imagUrl} alt="" />
+        </LazyLoad>
       </div>
       <div className="gpt3__article__heading">
         <div className="gpt3__article_heading-title">
           <p>{date}</p>
-          <a href="#" className="gpt3__links">
-            <h3>{title}</h3>
-          </a>
+          <h5>
+            <a href="#home" className="gpt3__links">
+              {title}{" "}
+            </a>
+          </h5>
         </div>
-
-        <a href="#" className="gpt3__links">
-          <p>Read Full Article</p>
-        </a>
+        <p>
+          <a href="#home" className="gpt3__links">
+            Read Full Article
+          </a>
+        </p>
       </div>
     </div>
   );

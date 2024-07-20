@@ -11,11 +11,11 @@ const Links = ({ title, linkList}) => {
         <ul className="gpt3__links__list">
           {linkList.map((data, idx) => {
             return (
-              <>
+              <li key={idx}>
                 <a href={data.url} key={`${idx}${data.label}`}>
-                  <li key={data.label + idx}>{data.label}</li>
+                  {data.label}
                 </a>
-              </>
+              </li>
             );
           })}
         </ul>

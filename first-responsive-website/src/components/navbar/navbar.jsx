@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
@@ -35,7 +35,7 @@ const Navbar = ({ inView }) => {
         <div className="gpt3__navbar_links-container">
           <div className="gpt3__navbar-links_logo">
             <a href="#hero__section">
-              <img src={logo} alt="" />
+              <img src={logo} alt="gpt text logo." />
             </a>
           </div>
           <NavMenu customClass={"gpt3__navbar-links"} />
@@ -48,12 +48,20 @@ const Navbar = ({ inView }) => {
         </div>
         <div className="gpt3__navbar-menu">
           {toggleMenu ? (
-            <RiCloseLine
-              color="white"
-              size="2rem"
-              className="gpt3__navbar-menu_menu-icon"
-              onClick={() => setToggleMenu(false)}
-            />
+            <div className="">
+              <RiCloseLine
+                color="white"
+                size="2rem"
+                className="gpt3__navbar-menu_close-icon"
+                onClick={() => setToggleMenu(false)}
+              />
+              <RiMenu3Line
+                color="white"
+                size="2rem"
+                className="gpt3__navbar-menu_open-icon"
+                onClick={() => setToggleMenu(true)}
+              />
+            </div>
           ) : (
             <RiMenu3Line
               color="white"
@@ -63,20 +71,13 @@ const Navbar = ({ inView }) => {
             />
           )}
           {toggleMenu && (
-            <div className="gpt3__navbar-menu_container scale-up-center">
-              {toggleMenu ? (
+            <div className={`gpt3__navbar-menu_container scale-up-center`}>
+              {toggleMenu && (
                 <RiCloseLine
                   color="white"
                   size="2rem"
                   className="gpt3__navbar-menu_menu-icon"
                   onClick={() => setToggleMenu(false)}
-                />
-              ) : (
-                <RiMenu3Line
-                  color="white"
-                  size="2rem"
-                  className="gpt3__navbar-menu_menu-icon"
-                  onClick={() => setToggleMenu(true)}
                 />
               )}
               <div className="gpt3__navbar-menu_container-links">

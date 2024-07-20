@@ -1,73 +1,152 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Not working on Safari and microsoft edge */
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--color-bg);
-    position: relative;
+  background-color: var(--color-bg);
+  position: relative;
 }
 
 a {
-    color: unset;
-    text-decoration: none;
+  color: unset;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
 }
 
+.gradient__text {
+  /* ff 3.6+ */
+  background: radial-gradient(
+    circle at 16% 4%,
+    rgba(174, 103, 250, 1) 0%,
+    rgba(244, 152, 103, 1) 79%
+  );
+  background-clip: text;
+  color: transparent;
+
+  font-family: var(--font-family);
+  font-size: var(--font-xl);
+  font-weight: var(--font-weight-xl);
+  line-height: var(--line-height-xl);
+  letter-spacing: -0.04em;
+  text-align: left;
+  width: 100%;
+}
+
 .gradient__bg {
-    /* ff 3.6+ */
-    background: -moz-radial-gradient(circle at 13% 18%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  background: -moz-radial-gradient(
+    circle at 13% 18%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
 
-    /* safari 5.1+,chrome 10+ */
-    background: -webkit-radial-gradient(circle at 13% 18%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 13% 18%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
 
-    /* opera 11.10+ */
-    background: -o-radial-gradient(circle at 13% 18%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 13% 18%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
 
-    /* ie 10+ */
-    background: -ms-radial-gradient(circle at 13% 18%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 13% 18%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
 
-    /* global 92%+ browsers support */
-    background: radial-gradient(circle at 13% 18%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 13% 18%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
 }
 
 .section__padding {
-padding: 6rem 4rem;
+  padding: 6rem 4rem;
 }
 
 .section__margin {
-margin: 6rem 4rem;
+  margin: 6rem 4rem;
 }
 
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
- @-webkit-keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
-  @keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
-  
-  
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.scale-down-center {
+  -webkit-animation: scale-down-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-down-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-down-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}

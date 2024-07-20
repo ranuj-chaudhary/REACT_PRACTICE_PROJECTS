@@ -1,13 +1,11 @@
-import React from "react";
 import "./header.css";
 import photo from "../../assets/people.png";
 import headerImage from "../../assets/ai.png";
-const Header = ({ inView, isSelected }) => {
+import LazyLoad from "react-lazy-load";
+const Header = ({ isSelected }) => {
   return (
     <div
-      className={`gpt3__header section__padding ${
-        !inView ? "sticky__header__margin" : ""
-      }`}
+      className={`gpt3__header section__padding`}
       ref={isSelected}
       id="hero__section"
     >
@@ -31,7 +29,12 @@ const Header = ({ inView, isSelected }) => {
         </div>
       </div>
       <div className="gpt3__header__image">
-        <img src={headerImage} alt="A artificial intelligence fictional face." />
+        <LazyLoad offset={100} className="LazyLoad">
+          <img
+            src={headerImage}
+            alt="A artificial intelligence fictional face."
+          />
+        </LazyLoad>
       </div>
     </div>
   );

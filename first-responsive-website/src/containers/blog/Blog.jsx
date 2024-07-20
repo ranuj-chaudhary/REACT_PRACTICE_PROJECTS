@@ -35,9 +35,9 @@ const Blog = () => {
     <section className="gpt3__blog section__padding" id="open-ai">
       <div className="gpt3__blog__container">
         <div className="gpt3__blog__heading">
-          <h1 className="gradient__text">
+          <h4 className="gradient__text">
             A lot is happening, We are blogging about it.
-          </h1>
+          </h4>
         </div>
         <div className="gpt3__blog__posts">
           {blogData.map((item, idx) => (

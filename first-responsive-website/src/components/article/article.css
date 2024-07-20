@@ -12,7 +12,7 @@
   justify-content: space-between;
 }
 
-.gpt3__article__heading h3 {
+.gpt3__article__heading h5 {
   font-family: var(--font-family);
 
   font-size: 25.11px;
@@ -33,7 +33,7 @@
 }
 .gpt3__article__image img {
   width: 100%;
-  height: 130.47px;
+  height: 150px;
 }
 
 .gpt3__article__heading p:last-child {

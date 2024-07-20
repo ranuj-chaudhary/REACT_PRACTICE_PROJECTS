@@ -15,6 +15,7 @@
 .gpt3__whatgpt3__sub-heading-text {
   flex: 2;
 }
+
 .gpt3__whatgpt3__sub-heading h3 {
   color: #ffffff;
   font-family: var(--font-family);
@@ -49,11 +50,6 @@
   color: #81afdd;
   flex: 2;
 }
-
-/* .gpt3__whatgpt3-answer {
-    flex: 2;
-  } */
-
 
 @media screen and (max-width: 1050px) {
   .gpt3__whatgpt3-feature {
