@@ -1,3 +1,4 @@
+/* containers */
 .gpt3__Cta__container {
   display: flex;
   justify-content: space-between;
@@ -6,40 +7,53 @@
   padding: 4rem 2rem;
   border-radius: 8px;
   flex-wrap: wrap;
-
 }
 
-.gpt3__Cta__heading p {
-  font-family: var(--font-family);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 30px;
-  text-align: left;
-}
+/* html elements */
 
+/* headings */
 .gpt3__Cta__heading h4 {
   font-family: Manrope;
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 45px;
+  font-size: var(--font-md-small);
+  line-height: var(--line-height-md);
+  font-weight: var(--font-weight-xl);
   text-align: left;
   color: #000000;
 }
+
+/* paragraph */
+.gpt3__Cta__heading p {
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  line-height: 3rem;
+  text-align: left;
+}
+
+/* buttons */
 .gpt3__Cta__button button {
   padding: 1rem 2rem;
   border-radius: 8px;
   border: none;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #171717;
 
   font-family: var(--font-family);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 3rem;
   text-align: left;
   cursor: pointer;
+  transition: background-color 300ms ease;
+}
+.gpt3__Cta__button button:hover {
+  background-color: #000000;
+}
+.gpt3__Cta__button button:active {
+  transform: scale(95%);
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 1050px) {
   .gpt3__Cta__heading h4 {
     margin-bottom: 2rem;

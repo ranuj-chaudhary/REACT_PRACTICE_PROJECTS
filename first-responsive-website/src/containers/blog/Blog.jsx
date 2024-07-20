@@ -30,6 +30,7 @@ const blogData = [
     date: `Sep 26, 2021`,
   },
 ];
+
 const Blog = () => {
   return (
     <section className="gpt3__blog section__padding" id="open-ai">

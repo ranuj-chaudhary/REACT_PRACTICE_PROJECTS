@@ -12,6 +12,7 @@
   src: local("Gilroy-Bold"), url("fonts/Gilroy-Medium.woff") format("woff");
 }
 
+/* FOOTER  */
 .gpt3__footer {
   background-color: var(--color-footer);
   padding-bottom: 0 !important;
@@ -21,37 +22,13 @@
 }
 
 .gpt3__footer__heading {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gpt3__footer__Container {
   margin-top: 8rem;
-}
-
-.gpt3__links__title p {
-  font-family: Gilroy-Bold;
-  font-size: 14px;
-  line-height: 16.41px;
-  text-align: left;
-  letter-spacing: 1.5px;  
-}
-.gpt3__links__list li {
-  font-family: Gilroy-Medium;
-  font-size: 12px;
-  line-height: 14.06px;
-  text-align: left;
-}
-
-.gpt3__footer__heading button {
-  font-family: Gilroy-Medium, sans;
-  font-size: 18px;
-  line-height: 21.09px;
-  text-align: left;
-  padding: 1rem 2rem;
-  color: #ffffff;
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  margin-top: 2rem;
 }
 
 .gpt3__footer__logo {
@@ -64,9 +41,27 @@
   justify-content: space-evenly;
 }
 
-.gpt3__footer__logo img {
-  width: 118x;
-  height: 30px;
+.gpt3__footer__copyright {
+  text-align: center;
+  padding: 3rem 0 1rem;
+}
+
+/* HTML ELEMENTS */
+
+/* headings */
+.gpt3__footer__heading h6 {
+  font-size: var(--font-xl);
+  width: 50%;
+  text-align: center;
+}
+
+/* paragraphs */
+.gpt3__links__title p {
+  font-family: Gilroy-Bold;
+  font-size: 14px;
+  line-height: 16.41px;
+  text-align: left;
+  letter-spacing: 1.5px;
 }
 
 .gpt3__footer__logo p,
@@ -87,13 +82,44 @@
   text-align: left;
 }
 
-.gpt3__footer__copyright {
-  text-align: center;
-  padding: 3rem 0 1rem;
+/* buttons */
+.gpt3__footer__heading button {
+  font-family: Gilroy-Medium, sans;
+  font-size: 18px;
+  line-height: 21.09px;
+  text-align: left;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  margin-top: 2rem;
 }
 
+/* images */
+.gpt3__footer__logo img {
+  width: 118x;
+  height: 30px;
+}
+
+/* list */
+.gpt3__links__list li {
+  font-family: Gilroy-Medium;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: left;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1050px) {
+  .gpt3__footer__heading h6 {
+    width: 70%;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .gpt3__footer__heading h6 {
+    width: 100%;
+  }
   .gpt3__footer__Container {
     flex-wrap: wrap;
   }
