@@ -3,9 +3,10 @@
   justify-content: space-between;
   align-items: center;
   background: var(--gradient-bar);
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   border-radius: 8px;
   flex-wrap: wrap;
+
 }
 
 .gpt3__Cta__heading p {
@@ -16,7 +17,7 @@
   text-align: left;
 }
 
-.gpt3__Cta__heading h3 {
+.gpt3__Cta__heading h4 {
   font-family: Manrope;
   font-size: 24px;
   font-weight: 800;
@@ -40,7 +41,7 @@
 }
 
 @media screen and (max-width: 1050px) {
-  .gpt3__Cta__heading h3 {
+  .gpt3__Cta__heading h4 {
     margin-bottom: 2rem;
   }
 }

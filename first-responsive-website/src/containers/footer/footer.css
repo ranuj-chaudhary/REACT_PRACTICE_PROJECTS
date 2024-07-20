@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gilroy-Medium"), url("fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gilroy-Bold"), url("fonts/Gilroy-Medium.woff") format("woff");
+}
+
 .gpt3__footer {
   background-color: var(--color-footer);
   padding-bottom: 0 !important;
@@ -14,8 +28,22 @@
   margin-top: 8rem;
 }
 
+.gpt3__links__title p {
+  font-family: Gilroy-Bold;
+  font-size: 14px;
+  line-height: 16.41px;
+  text-align: left;
+  letter-spacing: 1.5px;  
+}
+.gpt3__links__list li {
+  font-family: Gilroy-Medium;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: left;
+}
+
 .gpt3__footer__heading button {
-  font-family: var(--font-family);
+  font-family: Gilroy-Medium, sans;
   font-size: 18px;
   line-height: 21.09px;
   text-align: left;
@@ -25,6 +53,7 @@
   border: 2px solid #ffffff;
   margin-top: 2rem;
 }
+
 .gpt3__footer__logo {
   flex: 1;
 }
@@ -42,12 +71,20 @@
 
 .gpt3__footer__logo p,
 .gpt3__footer__copyright p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Gilroy-Medium;
   font-size: 12px;
   line-height: 14.06px;
+
   color: #ffffff;
   letter-spacing: 1px;
   margin-top: 1rem;
+}
+
+.gpt3__footer__logo p {
+  font-family: Gilroy-Medium;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: left;
 }
 
 .gpt3__footer__copyright {
@@ -55,12 +92,6 @@
   padding: 3rem 0 1rem;
 }
 
-@media screen and (max-width: 1050px) {
-  .gpt3__footer__heading {
-    font-size: 42px;
-    line-height: 60px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .gpt3__footer__Container {

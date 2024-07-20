@@ -72,9 +72,9 @@ const Footer = () => {
   return (
     <footer className="gpt3__footer section__padding">
       <div className="gpt3__footer__heading">
-        <h1 className="gradient__text">
+        <h6 className="gradient__text">
           Do you want to step in to the future before others
-        </h1>
+        </h6>
         <button type="button">Request Early Access</button>
       </div>
 
@@ -82,7 +82,7 @@ const Footer = () => {
         <div className="gpt3__footer__logo">
           <img
             src={gptLogo}
-            alt="gpt logo"
+            alt="gpt text footer logo."
             className="gpt3__footer__logo__image"
           />
           <p>GPT Pvt. Ltd., All Rights Reserved</p>
@@ -92,7 +92,7 @@ const Footer = () => {
             <Links
               title={item.heading}
               linkList={item.links}
-              key={` ${item.heading}${idx}`}
+              key={item.heading}
             />
           ))}
         </div>

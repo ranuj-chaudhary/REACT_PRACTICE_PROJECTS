@@ -1,11 +1,7 @@
-/* .gpt3__whatgpt3 {
-  padding: 0 4rem;
-} */
 .gpt3__whatgpt3-container {
   margin: auto;
   padding: 4rem 4rem;
 
-  /* global 92%+ browsers support */
   background: radial-gradient(
     circle at 100% 100%,
     rgba(27, 120, 222, 1) 0%,
@@ -20,19 +16,21 @@
   margin: 0 0 4rem;
   flex-wrap: wrap;
 }
-
-
-.gpt3__whatgpt3__sub-heading h3 {
+.gpt3__whatgpt3__sub-heading h2,
+.gpt3__whatgpt3__sub-heading h4 {
   color: #ffffff;
   font-family: var(--font-family);
-  font-size: 24px;
+  font-size: var(--font-md-small);
   font-weight: 800;
   letter-spacing: -0.04em;
   text-align: left;
-  width: 100%;
+}
 
+.gpt3__whatgpt3__sub-heading h4 {
+  width: 100%;
   position: relative;
 }
+
 .gpt3__whatgpt3__sub-heading :before {
   content: "";
   width: 30px;
@@ -76,10 +74,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8rem;
-  flex-wrap: ;
 }
 
-.gpt3__whatgpt3__heading h2 {
+.gpt3__whatgpt3__heading h3 {
   /* ff 3.6+ */
   background: radial-gradient(
     circle at 16% 4%,
@@ -144,20 +141,27 @@
   }
 
   .gpt3__whatgpt3__heading {
-   flex-direction: column;
+    flex-direction: column;
   }
 
-  .gpt3__whatgpt3__heading h2,
+  .gpt3__whatgpt3__heading h3,
   .gpt3__whatgpt3__heading span {
     width: 100%;
-    display: block;
     text-align: center;
+    flex-wrap: wrap;
   }
 }
 
 @media screen and (max-width: 768px) {
   .gpt3__whatgpt3 {
     padding: 4rem 2rem !important;
+  }
+
+  .gpt3__whatgpt3__heading h3,
+  .gpt3__whatgpt3__heading span {
+    display: block;
+    width: 100%;
+    text-align: left;
   }
 
   .gpt3__whatgpt3__sub-heading p {
