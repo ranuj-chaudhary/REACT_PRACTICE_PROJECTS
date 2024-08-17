@@ -14,16 +14,19 @@ function reducer(state, action) {
   switch (action.type) {
     case UPDATE_CART_ITEM:
       const itemExist = state.cart.includes(
-        (item) => item.id == action.payload.pizzaId
+        (item) => item.id === action.payload.pizzaId
       );
 
       if (itemExist) {
         const updatedCart = state.cart.map((item) => {
-          if (item.id == action.payload.pizzaId) {
+          if (item.id === action.payload.pizzaId) {
             return {
               ...action.payload,
             };
+          } else {
+            return item
           }
+
         });
 
         return {

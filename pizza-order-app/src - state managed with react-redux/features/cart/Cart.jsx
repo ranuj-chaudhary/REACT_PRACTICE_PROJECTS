@@ -22,7 +22,7 @@ function Cart() {
         )}
       </ul>
 
-      {cart.length != 0 && (
+      {cart.length !== 0 && (
         <div className="flex items-end justify-end gap-2">
           <Button to="/order/new" type="link">
             Order pizzas

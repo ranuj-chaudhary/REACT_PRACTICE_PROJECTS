@@ -10,7 +10,6 @@ export const REMOVE_CURRENT_ITEM = "REMOVE_CURRENT_ITEM";
 
 const initialUserState = {
   username: "",
-  orderDateTime: new Date(),
   cart: [],
 };
 
@@ -96,7 +95,7 @@ function UserProvider({ children }) {
   const [{ username, cart }, dispatch] = useReducer(reducer, initialUserState);
 
   return (
-    <UserContext.Provider value={{ username, dispatch, cart }}>
+    <UserContext.Provider value={{ username, cart, dispatch }}>
       {children}
     </UserContext.Provider>
   );
@@ -109,3 +108,4 @@ function useUser() {
   }
   return context;
 }
+export { useUser, UserProvider };

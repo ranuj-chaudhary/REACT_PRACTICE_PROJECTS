@@ -32,11 +32,11 @@ function UserReducer(state = initialUserState, action) {
 }
 
 //   ################# CART REDUCER #####################
-export const INSERT_CART_ITEM = "INSERT_CART_ITEM";
-export const DECREASE_ITEM_QUANTITY = "DECREASE_ITEM_QUANTITY";
-export const INCREASE_ITEM_QUANTITY = "INCREASE_ITEM_QUANTITY";
-export const EMPTY_CART = "EMPTY_CART";
-export const REMOVE_CURRENT_ITEM = "REMOVE_CURRENT_ITEM";
+const INSERT_CART_ITEM = "INSERT_CART_ITEM";
+const DECREASE_ITEM_QUANTITY = "DECREASE_ITEM_QUANTITY";
+const INCREASE_ITEM_QUANTITY = "INCREASE_ITEM_QUANTITY";
+const EMPTY_CART = "EMPTY_CART";
+const REMOVE_CURRENT_ITEM = "REMOVE_CURRENT_ITEM";
 
 const initialCartState = {
   cart: [],
