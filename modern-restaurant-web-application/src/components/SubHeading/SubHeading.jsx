@@ -19,4 +19,6 @@ const MinSubHeading = ({ minSubHeading = null, imageUrl = null }) => {
   );
 };
 
-export default { SubHeading, MinSubHeading };
+const heading = { SubHeading, MinSubHeading };
+
+export default heading;

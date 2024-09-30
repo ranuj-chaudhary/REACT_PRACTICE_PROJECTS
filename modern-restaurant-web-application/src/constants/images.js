@@ -1,4 +1,3 @@
-import bg from '../assets/bg.jpg';
 import chef from '../assets/chef.jpg';
 import G from '../assets/G.png';
 import gallery01 from '../assets/gallery01.jpg';
@@ -21,27 +20,27 @@ import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
 
-export default {
-  bg,
+const images = {
   chef,
-  G,
-  gallery01,
-  gallery02,
-  gallery03,
-  gallery04,
-  knife,
-  logo,
-  menu,
-  overlaybg,
-  spoon,
-  welcome,
-  findus,
-  laurels,
-  award01,
-  award02,
-  award03,
-  award05,
-  sign,
-  quote,
-  gericht,
-};
+ G,
+ gallery01,
+ gallery02,
+ gallery03,
+ gallery04,
+ knife,
+ logo,
+ menu,
+ overlaybg,
+ spoon,
+ welcome,
+ findus,
+ laurels,
+ award01,
+ award02,
+ award03,
+ award05,
+ sign,
+ quote,
+ gericht,
+}
+export default images

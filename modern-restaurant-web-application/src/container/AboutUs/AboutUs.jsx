@@ -3,11 +3,14 @@ import "./AboutUs.css";
 import { images } from "../../constants/index";
 import subHeadings from "../../components/SubHeading/SubHeading";
 const AboutUs = () => {
-  const { SubHeading, MinSubHeading } = subHeadings;
+  const { SubHeading } = subHeadings;
 
   const { spoon, G, knife } = images;
   return (
-    <div className="gericht__aboutus section__padding flex__center" id="aboutus">
+    <div
+      className="gericht__aboutus section__padding flex__center"
+      id="aboutus"
+    >
       <div className="gericht__aboutus__container">
         <div className="gericht__aboutus__title">
           <SubHeading title={"About us"} imageUrl={spoon} />

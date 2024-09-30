@@ -1,15 +1,13 @@
 import { images } from "../../constants/index";
 import "./Header.css";
 
-const Header = ({ isSelected, inView }) => {
+const Header = () => {
   const { welcome, spoon } = images;
 
   return (
     <div
-      className={`app__header section__padding ${
-        inView ? "sticky__padding" : ""
-      }`}
-      ref={isSelected}
+      className={`app__header section__padding `}
+      
     >
       <div className="app__header__container flex__center">
         <div className="app__header__heading">

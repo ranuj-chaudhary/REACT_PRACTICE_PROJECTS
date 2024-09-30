@@ -79,4 +79,6 @@ const awards = [
   },
 ];
 
-export default { wines, cocktails, awards };
+const menu = { wines, cocktails, awards };
+
+export default menu

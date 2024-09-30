@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
-import { images } from "../../constants/index";
 import "./Navbar.css";
 
 const Menu = () => {
   return (
     <>
-      <a href="#">
+      <a href="/">
         <p>Home</p>
       </a>
       <a href="#gallery">
@@ -26,13 +25,13 @@ const Menu = () => {
   );
 };
 
-const Navbar = ({ isSticky }) => {
+const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  console.log(isSticky);
+ 
   return (
-    <div className={`gericht__navbar ${!isSticky ? "sticky__navbar" : ""}`} >
+    <div className={`gericht__navbar `} >
       <div className="gericht__navbar__logo">
-        <a href="#">
+        <a href="/">
           <p>Gericht</p>
         </a>
       </div>
@@ -41,16 +40,16 @@ const Navbar = ({ isSticky }) => {
       </div>
       <div className="gericht__navbar__sign p__opensans">
         <div className="gericht__navbar__sign__container">
-          <a href="">
+          <a href="/">
             <span>Log In</span>
           </a>
           <span> / </span>
-          <a href="">
+          <a href="/">
             <span>Registration</span>
           </a>
         </div>
         <div className="gericht__navbar_sign-book-table">
-          <a href="">
+          <a href="/">
             <p>Book Table</p>
           </a>
         </div>
@@ -74,16 +73,16 @@ const Navbar = ({ isSticky }) => {
             <Menu />
             <div className="gericht__navbar-menu__sign p__opensans">
               <div className="gericht__navbar-menu__sign__container">
-                <a href="">
+                <a href="/">
                   <span>Log In</span>
                 </a>
                 <span> / </span>
-                <a href="">
+                <a href="/">
                   <span>Registration</span>
                 </a>
               </div>
               <div className="gericht__navbar-menu_sign-book-table">
-                <a href="">
+                <a href="/">
                   <p>Book Table</p>
                 </a>
               </div>

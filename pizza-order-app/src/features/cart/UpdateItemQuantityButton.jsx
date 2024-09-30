@@ -6,7 +6,7 @@ import { increaseItemQuantity, decreaseItemQuantity } from "../../store";
 function UpdateItemQuantity({ id, setCurrentQuantity = null }) {
   const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
-  const quantity = cart.find((item) => item.pizzaId == id)?.quantity || 0;
+  const quantity = cart.find((item) => item.pizzaId === id)?.quantity || 0;
 
   useEffect(
     function () {

@@ -13,20 +13,14 @@ import {
 } from "./container";
 import { Navbar } from "./components";
 import "./App.css";
-import { useInView } from "react-intersection-observer";
 
 const App = () => {
-  const options = {
-    root: null,
-    threshold: 0,
-    rootMargin: "-100px",
-  };
-  const { ref, inView, entry } = useInView(options);
+ 
 
   return (
     <div className="app__bg">
-      <Navbar isSticky={inView} />
-      <Header isSelected={ref} isSticky={inView}/>
+      <Navbar  />
+      <Header />
       <AboutUs />
       <SpecialMenu />
       <Chef />
