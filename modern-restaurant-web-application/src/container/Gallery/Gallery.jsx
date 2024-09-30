@@ -25,7 +25,7 @@ const Gallery = () => {
         </div>
         <div className="gericht__gallery__images__overlay">
           <img src={gallery03} alt="gallery images food" />
-          <a href="">
+          <a href="/">
             <RiInstagramLine color="#ffffff" size={28} />
           </a>
         </div>

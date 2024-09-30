@@ -7,19 +7,19 @@ const Chef = () => {
   return (
     <div className="gericht__chef section__padding flex__center">
       <div className="gericht__chef__image">
-        <img src={chef} alt="chef smiling image" />
+        <img src={chef} alt="chef smiling" />
       </div>
       <div className="gericht__chef__content">
         <div className="gericth__chef__subheading">
           <h5>Chef’s Word</h5>
-          <img src={spoon} alt="" />
+          <img src={spoon} alt="spoon" />
         </div>
         <div className="gericth__chef__title">
           <h2 className="headtext__cormorant">What we believe in</h2>
           Nulla scelerisque scelerisque congue ac consequat, aliquam molestie
           <blockquote className="p__opensans">
             <span>
-              <img src={quote} alt="quote comma image" />
+              <img src={quote} alt="quote comma" />
             </span>
             auctor sit iaculis in arcu. Vulputate nulla lobortis mauris eget
             sit. lectus eu. Congue iaculis integer curabitur semper sit nunc.

@@ -115,7 +115,7 @@ const rootReducers = combineReducers({ cart: CartReducer, user: UserReducer });
 const store = createStore(
   rootReducers,
   composeWithDevTools(applyMiddleware(thunk))
-);
+); 
 
 export default store;
 
