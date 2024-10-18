@@ -8,8 +8,7 @@ const Header = function () {
     <header className="flex items-center justify-between bg-yellow-500 p-4 font-medium text-blue-950">
       <div className="logo">
         <h2 className="font-mono text-2xl	tracking-wide ">
-          {" "}
-          Fast React Pizza Co.
+         PizzaMania
         </h2>
       </div>
       <div className="flex items-center justify-between gap-4">
