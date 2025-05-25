@@ -13,11 +13,19 @@
   --color-white: #ffffff;
 }
 
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+  background-color: var(--color-black);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+
 }
 
 a {

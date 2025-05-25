@@ -7,7 +7,7 @@ const AboutUs = () => {
 
   const { spoon, G, knife } = images;
   return (
-    <div
+    <section
       className="gericht__aboutus section__padding flex__center"
       id="aboutus"
     >
@@ -40,7 +40,7 @@ const AboutUs = () => {
         <img src={G} alt="" />
       </div>
       <img src={knife} className="gericht__aboutus__knife" alt="" />
-    </div>
+    </section>
   );
 };
 

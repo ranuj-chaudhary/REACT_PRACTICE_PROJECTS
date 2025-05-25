@@ -7,7 +7,7 @@ const Laurels = () => {
   const { awards } = data;
 
   return (
-    <div className="gericht__laurels section__padding flex__center">
+    <section className="gericht__laurels section__padding flex__center">
       <div className="gericht__laurels__awards">
         <div className="gericht__laurels__heading">
           <p className="p__cormorant">Awards & recognition</p>
@@ -33,7 +33,7 @@ const Laurels = () => {
       <div className="gericht__laurels__logo">
         <img src={logo} alt="" />
       </div>
-    </div>
+    </section>
   );
 };
 

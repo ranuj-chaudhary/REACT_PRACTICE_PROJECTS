@@ -4,7 +4,7 @@ import { images } from "../../constants/index";
 const FindUs = () => {
   const { spoon, findus } = images;
   return (
-    <div className="gericht__findus flex__center section__padding">
+    <section className="gericht__findus flex__center section__padding">
       <div className="gericht__findus__heading">
         <h5 className="p__cormorant">Contact</h5>
         <img src={spoon} alt="" />
@@ -24,7 +24,7 @@ const FindUs = () => {
       <div className="gericht__findus__image">
         <img src={findus} alt="" />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,8 +5,10 @@ import { images } from "../../constants/index";
 import Newsletter from "../../components/Footer/Newsletter";
 const Footer = () => {
   const { spoon } = images;
-  return (    
-    <div className="gericht__footer section__padding " id="footer">
+  const year = new Date(new Date()).getFullYear();
+
+  return (
+    <footer className="gericht__footer section__padding " id="footer">
       <Newsletter />
       <div className="gericht__footer__links__container">
         <div className="gericht__footer__links">
@@ -37,9 +39,11 @@ const Footer = () => {
             <p> 07:00am -11:00 pm </p>
           </div>
         </div>
-      <p className="p__opensans">2021 Gerícht. All Rights reserved.</p>
+        <p className="p__opensans">
+          &copy; {` ${year}`} Gerícht. All Rights reserved.
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

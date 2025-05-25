@@ -8,7 +8,7 @@ const SpecialMenu = function () {
   const { spoon, menu } = images;
   const { wines, cocktails } = data;
   return (
-    <div
+    <section
       className="gericht__special-menu section__menu section__padding"
       id="menu"
     >
@@ -52,7 +52,7 @@ const SpecialMenu = function () {
           View More
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

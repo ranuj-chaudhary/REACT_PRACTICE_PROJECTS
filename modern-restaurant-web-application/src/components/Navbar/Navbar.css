@@ -1,8 +1,8 @@
-.gericht__navbar {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 6rem;
+  padding: 1rem 6rem;
  
 }
 
@@ -14,33 +14,34 @@
   z-index: 99999;
 }
 
-.gericht__navbar__logo {
+.navbar__logo {
   font-family: var(--font-base);
   font-size: 44px;
   font-weight: 700;
-  line-height: 57.2px;
+  line-height: 0;
   letter-spacing: 0.04em;
   color: var(--color-white);
 }
 
-.gericht__navbar__links {
+.navbar__links {
   display: flex;
   gap: 2rem;
+  list-style: none;
 }
 
-.gericht__navbar__sign {
+.navbar__sign {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.gericht__navbar__sign__container {
+.navbar__sign__container {
   padding-right: 1rem;
   margin: 1px solid #ffffff;
   position: relative;
 }
 /* DIVIDER LINE LOGIN / BOOK TABLE */
-.gericht__navbar__sign__container::before {
+.navbar__sign__container::before {
   content: "";
   position: absolute;
   right: 0;
@@ -55,20 +56,20 @@
   );
 }
 
-.gericht__navbar_sign-book-table {
+.navbar_sign-book-table {
   padding-left: 1rem;
 }
 
 /* NAVBAR MENU */
-.gericht__navbar-menu {
+.navbar-menu {
   display: none;
   z-index: 999;
 }
-.gericht__navbar-menu__sign {
+.navbar-menu__sign {
   display: none;
 }
 
-.gericht__navbar-menu__links {
+.navbar-menu__links {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -83,28 +84,28 @@
   width: 250px;
 }
 
-.gericht__navbar-menu__links p,
-.gericht__navbar-menu_sign-book-table p {
+.navbar-menu__links p,
+.navbar-menu_sign-book-table p {
   text-align: right;
 }
 
 @media screen and (max-width: 1050px) {
-  .gericht__navbar {
+  .navbar {
     padding: 2rem 4rem;
   }
-  .gericht__navbar-menu {
+  .navbar-menu {
     display: flex;
   }
-  .gericht__navbar__links {
+  .navbar__links {
     display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .gericht__navbar__sign {
+  .navbar__sign {
     display: none;
   }
-  .gericht__navbar-menu__sign {
+  .navbar-menu__sign {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -114,7 +115,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .gericht__navbar {
+  .navbar {
     padding: 2rem 2rem;
   }
 }

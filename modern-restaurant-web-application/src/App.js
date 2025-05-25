@@ -11,25 +11,14 @@ import {
   Laurels,
   SpecialMenu,
 } from "./container";
-import { Navbar } from "./components";
 import "./App.css";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
  
 
   return (
-    <div className="app__bg">
-      <Navbar  />
-      <Header />
-      <AboutUs />
-      <SpecialMenu />
-      <Chef />
-      <Intro />
-      <Laurels />
-      <Gallery />
-      <FindUs />
-      <Footer />
-    </div>
+    <Homepage />
   );
 };
 
