@@ -1,5 +1,5 @@
 .section__padding {
-  padding: 4rem 6rem;
+  padding: 1rem 6rem;
 }
 
 .flex__center {
@@ -8,19 +8,11 @@
   align-items: center;
 }
 
-.app__bg {
-  background-color: black;
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
 
 .app__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   min-height: 100vh;
 }
 
@@ -50,6 +42,10 @@
 
 .app__wrapper_img img {
   width: 80%;
+}
+
+.p {
+  line-height: 1.5;
 }
 
 .p__cormorant {

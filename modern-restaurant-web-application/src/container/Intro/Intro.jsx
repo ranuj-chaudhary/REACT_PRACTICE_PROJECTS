@@ -19,7 +19,7 @@ const Intro = () => {
   );
 
   return (
-    <div className="geritch__intro">
+    <section className="geritch__intro">
       <video muted src={meal} ref={videoPlayer}></video>
       <button type="button">
         {isVidoePlaying ? (
@@ -36,7 +36,7 @@ const Intro = () => {
           />
         )}
       </button>
-    </div>
+    </section>
   );
 };
 

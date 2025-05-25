@@ -5,7 +5,7 @@ import { images } from "../../constants/index";
 const Chef = () => {
   const { chef, spoon, sign, quote } = images;
   return (
-    <div className="gericht__chef section__padding flex__center">
+    <section className="gericht__chef section__padding flex__center">
       <div className="gericht__chef__image">
         <img src={chef} alt="chef smiling" />
       </div>
@@ -31,7 +31,7 @@ const Chef = () => {
           <img src={sign} alt="" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

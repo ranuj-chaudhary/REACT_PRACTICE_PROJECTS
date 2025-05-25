@@ -1,16 +1,14 @@
 import { images } from "../../constants/index";
 import "./Header.css";
-
+import { Navbar } from "../../components";
 const Header = () => {
   const { welcome, spoon } = images;
 
   return (
-    <div
-      className={`app__header section__padding `}
-      
-    >
-      <div className="app__header__container flex__center">
-        <div className="app__header__heading">
+    <header className="app__header" role="banner">
+      <Navbar />
+      <div className="app__header__container flex__center section__padding">
+        <section className="app__header__heading">
           <div className="app__header__subheading">
             <p className="p__cormorant">Chase the new Flavour</p>
             <img src={spoon} alt="" />
@@ -26,12 +24,15 @@ const Header = () => {
             <span>#Bar</span>
             <span> #Gericht</span>
           </div>
-        </div>
-        <div className="app__header__image">
-          <img src={welcome} alt="" />
-        </div>
+        </section>
+        <section className="app__header__image">
+          <img
+            src={welcome}
+            alt="fried fish tuna with fine dining and garninshing with lemon mint"
+          />
+        </section>
       </div>
-    </div>
+    </header>
   );
 };
 
